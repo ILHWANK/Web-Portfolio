@@ -92,7 +92,7 @@ const ozRewrite: ProjectData = {
           title: "Shop",
           summary: "공통 Slot + UIStyle로 다양한 재화/구매 분기 UI를 통합",
           media: [
-            { type: "video", src: "/media/projects/oz-rewrite/01_shop.mp4", poster: "/media/projects/oz-rewrite/poster_shop.png" },
+            { type: "video", src: `${import.meta.env.BASE_URL}media/projects/oz-rewrite/shop.mp4`, poster: `${import.meta.env.BASE_URL}media/projects/oz-rewrite/temp.png` },
             // 이미지 4컷으로 바꿀 경우 예시:
             // { type: "image", src: "/media/projects/oz-rewrite/shop_01.png", alt: "상점 메인" },
             // { type: "image", src: "/media/projects/oz-rewrite/shop_02.png", alt: "상점 메인2" },
