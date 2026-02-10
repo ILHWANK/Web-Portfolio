@@ -1,0 +1,107 @@
+---
+const {
+    id = "carousel",
+    items = [],
+    showDots = true,
+    showArrows = true,
+    aspect = "16 / 9",
+} = Astro.props;
+
+function isVideo(item) {
+    return item?.type === "video";
+}
+---
+
+<div class="carousel" data-carousel id={id}>
+    <div class="carousel__viewport" data-viewport style={`--aspect:${aspect};`}>
+        {items.map((item, index) => (
+                <div class="carousel__slide" data-slide aria-label={`${index + 1} / ${items.length}`}>
+                    {isVideo(item) ? (
+                            <video
+                                    class="carousel__media"
+                                    src={item.src}
+                                    controls
+                                    preload="metadata"
+                                    poster={item.poster || undefined}
+                            />
+                    ) : (
+                            <img class="carousel__media" src={item.src} alt={item.alt || ""} loading="lazy" />
+                    )}
+                </div>
+        ))}
+    </div>
+
+    {showArrows ? (
+            <div class="carousel__arrows">
+                <button class="carousel__btn" type="button" data-prev aria-label="이전">‹</button>
+                <button class="carousel__btn" type="button" data-next aria-label="다음">›</button>
+            </div>
+    ) : null}
+
+    {showDots ? (
+            <div class="carousel__dots" aria-label="슬라이드 선택">
+                {items.map((_, i) => (
+                        <button class="carousel__dot" type="button" data-dot data-index={i} aria-label={`${i + 1}번 슬라이드`} />
+                ))}
+            </div>
+    ) : null}
+</div>
+
+<script is:inline>
+    (() => {
+        const root = document.currentScript?.previousElementSibling;
+        if (!root || !root.matches?.("[data-carousel]")) return;
+
+        const viewport = root.querySelector("[data-viewport]");
+        const slides = Array.from(root.querySelectorAll("[data-slide]"));
+        const dots = Array.from(root.querySelectorAll("[data-dot]"));
+
+        const getIndex = () => {
+            const left = viewport.scrollLeft;
+            const w = viewport.clientWidth;
+            return Math.round(left / w);
+        };
+
+        const scrollToIndex = (i) => {
+            const w = viewport.clientWidth;
+            viewport.scrollTo({ left: i * w, behavior: "smooth" });
+        };
+
+        const setActiveDot = (i) => {
+            dots.forEach((d, idx) => d.setAttribute("aria-current", idx === i ? "true" : "false"));
+        };
+
+        // 초기 상태
+        setActiveDot(0);
+
+        // 점 클릭
+        dots.forEach((d) => {
+            d.addEventListener("click", () => {
+                const i = Number(d.dataset.index || 0);
+                scrollToIndex(i);
+            });
+        });
+
+        // 이전/다음
+        root.querySelector("[data-prev]")?.addEventListener("click", () => {
+            const i = Math.max(0, getIndex() - 1);
+            scrollToIndex(i);
+        });
+        root.querySelector("[data-next]")?.addEventListener("click", () => {
+            const i = Math.min(slides.length - 1, getIndex() + 1);
+            scrollToIndex(i);
+        });
+
+        // 스크롤 시 dot 갱신
+        let raf = 0;
+        viewport.addEventListener("scroll", () => {
+            cancelAnimationFrame(raf);
+            raf = requestAnimationFrame(() => setActiveDot(getIndex()));
+        });
+
+        // 리사이즈 시 현재 인덱스 유지
+        window.addEventListener("resize", () => {
+            scrollToIndex(getIndex());
+        });
+    })();
+</script>

@@ -1,0 +1,17 @@
+---
+const nav = [
+    { label: "홈", href: "/" },
+    { label: "프로젝트", href: "/projects" },
+    { label: "소개", href: "/about" }
+];
+---
+<header class="header">
+    <div class="container header__inner">
+        <a class="brand" href="/">김일환</a>
+        <nav class="nav">
+            {nav.map((n) => (
+                    <a class="nav__link" href={n.href}>{n.label}</a>
+            ))}
+        </nav>
+    </div>
+</header>

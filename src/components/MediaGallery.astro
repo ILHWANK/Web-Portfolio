@@ -1,0 +1,25 @@
+---
+const { items = [] } = Astro.props;
+
+function isVideo(item) {
+    return item && item.type === "video";
+}
+---
+<div class="media">
+    {items.map((item) => (
+            <div class="media__item">
+                {isVideo(item) ? (
+                        <video
+                                class="video"
+                                src={item.src}
+                                controls
+                                preload="metadata"
+                                poster={item.poster || undefined}
+                        />
+                ) : (
+                        <img class="image" src={item.src} alt={item.alt} loading="lazy" />
+                )}
+                {"title" in item ? <p class="caption">{item.title}</p> : null}
+            </div>
+    ))}
+</div>

@@ -1,0 +1,41 @@
+---
+const { item } = Astro.props;
+
+const hasMedia = !!item.media;
+
+function isVideo(m) {
+    return m?.type === "video";
+}
+function isImageLike(m) {
+    return m?.type === "image" || m?.type === "gif";
+}
+---
+<article class="implCard">
+    <header class="implCard__title">{item.title}</header>
+
+    <div class="implCard__media">
+        {hasMedia ? (
+            isVideo(item.media) ? (
+                    <video
+                            class="implCard__mediaEl"
+                            src={item.media.src}
+                            controls
+                            preload="metadata"
+                            poster={item.media.poster || undefined}
+                    />
+            ) : isImageLike(item.media) ? (
+                    <img class="implCard__mediaEl" src={item.media.src} alt={item.media.alt || ""} loading="lazy" />
+            ) : null
+        ) : (
+                <div class="implCard__noMedia">
+                    <span class="implCard__noMediaText">미디어 없음</span>
+                </div>
+        )}
+    </div>
+
+    <div class="implCard__details" role="region" aria-label="상세 정보">
+        <ul class="implCard__list">
+            {item.details.map((d) => <li>{d}</li>)}
+        </ul>
+    </div>
+</article>

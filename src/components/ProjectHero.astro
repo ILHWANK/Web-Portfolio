@@ -1,0 +1,35 @@
+---
+import TagList from "./TagList.astro";
+
+const {
+    title,
+    subtitle,
+    period,
+    roleSummary,
+    techStack,
+    hero,
+} = Astro.props;
+
+const headline = hero?.headline ?? "";
+const subline = hero?.subline ?? "";
+---
+
+<section class="hero">
+    <div class="hero2 hero2--text-only">
+        <div class="hero2__text">
+            {subtitle ? <p class="kicker">{subtitle}</p> : null}
+            {title ? <h1 class="h1">{title}</h1> : null}
+            {period ? <p class="muted">{period}</p> : null}
+
+            {(headline || subline) ? <div class="spacer"></div> : null}
+            {headline ? <p class="lead">{headline}</p> : null}
+            {subline ? <p class="muted">{subline}</p> : null}
+
+            {roleSummary ? <div class="spacer"></div> : null}
+            {roleSummary ? <p class="body">{roleSummary}</p> : null}
+
+            {techStack?.length ? <div class="spacer"></div> : null}
+            {techStack?.length ? <TagList tags={techStack} /> : null}
+        </div>
+    </div>
+</section>

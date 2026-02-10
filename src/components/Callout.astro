@@ -1,0 +1,29 @@
+---
+const { name, desc, videoSrc, shots } = Astro.props;
+---
+
+<div class="card">
+    <div class="tagHead">
+        <div class="tagName">{name}</div>
+        <div class="tagDesc">{desc}</div>
+    </div>
+
+    {videoSrc ? (
+            <div class="videoBox">
+                <video src={videoSrc} controls preload="metadata"></video>
+            </div>
+    ) : (
+            <div class="videoBox">
+                영상 자리 (추가 예정)
+            </div>
+    )}
+
+    {shots?.length ? (
+            <div class="tagDesc">
+                <div style="font-weight:700; color: var(--text); margin-bottom: 6px;">추천 녹화 포인트</div>
+                <ul style="margin:0; padding-left:18px;">
+                    {shots.map((s: string) => <li style="margin:6px 0;">{s}</li>)}
+                </ul>
+            </div>
+    ) : null}
+</div>

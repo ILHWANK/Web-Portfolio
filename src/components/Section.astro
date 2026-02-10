@@ -1,0 +1,19 @@
+---
+import FeatureCard from "./FeatureCard.astro";
+const { section } = Astro.props;
+---
+
+<section class="section" id={section.id}>
+    <h2 class="h2">{section.title}</h2>
+    {section.subtitle ? <p class="lead">{section.subtitle}</p> : null}
+
+    {section.kind === "bullets" ? (
+            <ul class="list">
+                {(section.bullets ?? []).map((b) => <li>{b}</li>)}
+            </ul>
+    ) : (
+            <div class="cardGrid">
+                {section.cards.map((c) => <FeatureCard card={c} />)}
+            </div>
+    )}
+</section>

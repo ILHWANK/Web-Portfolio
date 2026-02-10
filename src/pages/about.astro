@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+<BaseLayout title="소개">
+    <Header />
+    <main class="container">
+        <section class="section">
+            <h1 class="h1">소개</h1>
+            <p class="body">
+                Unity 기반 클라이언트 개발을 중심으로 UI, 연출, 리소스/메모리, 툴 제작까지 폭넓게 경험했습니다.
+                현재는 OZ:Rewrite 경험을 정리해 포트폴리오로 구조화하고, 이후 LWC를 추가할 예정입니다.
+            </p>
+            <div class="spacer"></div>
+            <ul class="list">
+                <li><a href="https://github.com/ILHWANK" target="_blank" rel="noreferrer">GitHub</a></li>
+            </ul>
+        </section>
+    </main>
+    <Footer />
+</BaseLayout>
