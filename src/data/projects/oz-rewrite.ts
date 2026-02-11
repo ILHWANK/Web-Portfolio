@@ -309,11 +309,12 @@ const ozRewrite: ProjectData = {
       kind: "case",
       id: "kingdom-cases",
       title: "3-1. 대표 콘텐츠",
+      subtitle: "이 섹션은 미니게임 영상 + 핵심 포인트",
       cards: [
         {
           title: "왕국 초대",
           summary: "정렬 제약을 해소하고 연출 확장이 가능한 기반으로 구조 개선",
-          media: [{ type: "video", src: "/media/projects/oz-rewrite/08_kingdom_invite.mp4", poster: "/media/projects/oz-rewrite/poster_invite.png" }],
+          media: [{ type: "video", src: `${import.meta.env.BASE_URL}media/projects/oz-rewrite/kingdom_Invitation_Interaction.mp4`, poster: `${import.meta.env.BASE_URL}media/projects/oz-rewrite/temppng.png` }],
           points: [
             "아이소메트릭 정렬 문제로 ‘건물 뒤 등장 연출’이 불가능했던 구조 개선",
             "기존 기능 영향 최소화하며 코드 전반 구조 정리",
@@ -325,7 +326,7 @@ const ozRewrite: ProjectData = {
         {
           title: "왕국 선물",
           summary: "상호작용 방식 개선 + 연출 타이밍/등장 NPC 확장",
-          media: [{ type: "video", src: "/media/projects/oz-rewrite/09_kingdom_gift.mp4", poster: "/media/projects/oz-rewrite/poster_gift.png" }],
+          media: [{ type: "video", src: `${import.meta.env.BASE_URL}media/projects/oz-rewrite/kingdom_present.mp4`, poster: `${import.meta.env.BASE_URL}media/projects/oz-rewrite/temppng.png` }],
           points: [
             "직접 상호작용 기반 → UI 버튼 기반으로 선물 가능한 캐릭터 연출 확인",
             "호감도 연출 유무에 따라 애니메이션 재생 타이밍 분기",
