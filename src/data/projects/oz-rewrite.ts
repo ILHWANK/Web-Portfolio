@@ -247,7 +247,7 @@ const ozRewrite: ProjectData = {
         {
           title: "술래 찾기",
           summary: "Factory/Strategy/State로 생성·행동을 분리해 확장 가능한 구조",
-          media: [{ type: "video", src: `${import.meta.env.BASE_URL}media/projects/oz-rewrite/taggerfind.mp4`, poster: "/media/projects/oz-rewrite/poster_tag.png" }],
+          media: [{ type: "video", src: `${import.meta.env.BASE_URL}media/projects/oz-rewrite/taggerfind.mp4`, poster: `${import.meta.env.BASE_URL}media/projects/oz-rewrite/temppng.png` }],
           points: [
             "SD 캐릭터 Factory 생성(상태/데이터에 따라 사이즈/속도/대사/오브젝트 등 변형)",
             "술래/일반 행동 차이를 Strategy로 분리",
@@ -259,7 +259,7 @@ const ozRewrite: ProjectData = {
         {
           title: "타일 깨기",
           summary: "획득·파괴·발견·라운드 전환까지 UI/로직을 신규 구현",
-          media: [{ type: "video", src: `${import.meta.env.BASE_URL}media/projects/oz-rewrite/tilebreak.mp4`, poster: "/media/projects/oz-rewrite/poster_tile.png" }],
+          media: [{ type: "video", src: `${import.meta.env.BASE_URL}media/projects/oz-rewrite/tilebreak.mp4` }],
           points: [
             "이벤트 재화로 타일 획득/파괴, 아이템 발견 단계별 연출",
             "NPC 대사/라운드 전환/폭탄 다중 파괴 기능",
@@ -270,7 +270,7 @@ const ozRewrite: ProjectData = {
         {
           title: "영웅 투표",
           summary: "보상/연출 분기 + 라운드 종료 연출까지 포함한 이벤트 구조",
-          media: [{ type: "video", src: `${import.meta.env.BASE_URL}media/projects/oz-rewrite/vote.mp4`, poster: "/media/projects/oz-rewrite/poster_vote.png" }],
+          media: [{ type: "video", src: `${import.meta.env.BASE_URL}media/projects/oz-rewrite/vote.mp4`, poster: `${import.meta.env.BASE_URL}media/projects/oz-rewrite/tempgif.gif` }],
           points: [
             "기존 메인 패널 기반으로 보상 정보 팝업/관련 UI 추가",
             "투표 시 캐릭터 투표 연출 적용 + 재화 상태에 따른 분기",
