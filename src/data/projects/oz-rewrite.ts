@@ -204,7 +204,7 @@ const ozRewrite: ProjectData = {
           summary: "운영/기획 변경을 ‘땜질’이 아니라 구조 개선으로 흡수",
           points: [
             "아이템 확률 띠지(높음/보통/낮음) 기능 추가 + 테이블 구조 변경 방향 제안",
-            "아이템 설명/획득 경로 Popup 리뉴얼: 설명+획득경로 통합, Command 기반 바로가기 로직 개선",
+            "아이템 설명/획득 경로 Popup 리뉴얼: 설명 + 획득경로 통합, Command 기반 바로가기 로직 개선",
             "UI 구조/Addressables 구조 변경 대응: 기존 코드 전반 정리·수정",
             "해상도 대응 컴포넌트(ResolutionBG/Fit/Effect) 개발 + SafeArea 고려",
           ],
@@ -242,7 +242,7 @@ const ozRewrite: ProjectData = {
       kind: "case",
       id: "event-minigame-cases",
       title: "2-1. 미니게임 3종",
-      subtitle: "이 섹션은 미니게임 영상 + 핵심 포인트",
+      subtitle: "미니게임 영상 + 핵심 포인트",
       cards: [
         {
           title: "술래 찾기",
@@ -309,7 +309,7 @@ const ozRewrite: ProjectData = {
       kind: "case",
       id: "kingdom-cases",
       title: "3-1. 대표 콘텐츠",
-      subtitle: "이 섹션은 미니게임 영상 + 핵심 포인트",
+      subtitle: "미니게임 영상 + 핵심 포인트",
       cards: [
         {
           title: "왕국 초대",
@@ -436,6 +436,7 @@ const ozRewrite: ProjectData = {
       kind: "case",
       id: "stage-cases",
       title: "4-1. 대표 사례",
+      subtitle: "스테이지 기본 조작 및 관련 기능 + 핵심 포인트",
       cards: [
         {
           title: "스테이지 전반 조작",
@@ -675,6 +676,7 @@ const ozRewrite: ProjectData = {
         "리소스/최적화: Addressables 로드·캐시·해제 전략, Profiler/Xcode Instruments/Memory Profiler로 분석",
         "플레이/맵: LoopScrollRect 대량 리스트, NavMesh 이동/상호작용, Cinemachine 카메라 연출, Spine 상태 애니메이션, Shader 적용/수정",
         "역량: OOP 기반 역할 분리, Factory/Strategy/State/Command 패턴 적용, 툴 제작(EditorWindow)로 제작 효율 향상",
+        "텍스쳐 포멧, 그래픽 파이프 라인",
       ],
     },
   ],
