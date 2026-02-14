@@ -94,10 +94,10 @@ const ozRewrite: ProjectData = {
           title: "Shop",
           summary: "공통 Slot + UIStyle로 다양한 재화/구매 분기 UI를 통합",
           media: [
-            { type: "image", src: `${IMG}/temppng.png`, alt: "상점 메인" },
-            { type: "image", src: `${IMG}/temppng.png`, alt: "상점 메인2" },
-            { type: "image", src: `${IMG}/temppng.png`, alt: "구매 방식 전환" },
-            { type: "image", src: `${IMG}/temppng.png`, alt: "제한 수량 구매" },
+            { type: "image", src: `${IMG}/shop_main1.jpg`, alt: "상점 메인" },
+            { type: "image", src: `${IMG}/shop_payment2.jpg`, alt: "상점 다수 구매" },
+            { type: "image", src: `${IMG}/shop_main2.jpg`, alt: "상점 메인2" },
+            { type: "image", src: `${IMG}/shop_payment1.jpg`, alt: "상점 단일 구매" },
           ],
           points: [
             "UIStyle 개념으로 공통 Slot Prefab 구조화(표현 차이만 분리)",
