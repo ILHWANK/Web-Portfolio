@@ -328,7 +328,11 @@ const ozRewrite: ProjectData = {
                 {
                     title: "왕국 초대",
                     summary: "정렬 제약을 해소하고 연출 확장이 가능한 기반으로 구조 개선",
-                    media: [{ type: "video", src: "/media/projects/oz-rewrite/08_kingdom_invite.mp4", poster: "/media/projects/oz-rewrite/poster_invite.png" }],
+                    media: [{
+                        type: "video",
+                        src: `${VID}/kingdom_Invitation_Interaction.mp4`,
+                        poster: `${IMG}/kingdom_Invitation_Interaction.png`,
+                    }],
                     points: [
                         "아이소메트릭 정렬 문제로 ‘건물 뒤 등장 연출’이 불가능했던 구조 개선",
                         "기존 기능 영향 최소화하며 코드 전반 구조 정리",
@@ -340,7 +344,11 @@ const ozRewrite: ProjectData = {
                 {
                     title: "왕국 선물",
                     summary: "상호작용 방식 개선 + 연출 타이밍/등장 NPC 확장",
-                    media: [{ type: "video", src: "/media/projects/oz-rewrite/09_kingdom_gift.mp4", poster: "/media/projects/oz-rewrite/poster_gift.png" }],
+                    media: [{
+                        type: "video",
+                        src: `${VID}/kingdom_present.mp4`,
+                        poster: `${IMG}/kingdom_present.png`,
+                    }],
                     points: [
                         "직접 상호작용 기반 → UI 버튼 기반으로 선물 가능한 캐릭터 연출 확인",
                         "호감도 연출 유무에 따라 애니메이션 재생 타이밍 분기",
@@ -352,9 +360,9 @@ const ozRewrite: ProjectData = {
                     title: "왕국 운세",
                     summary: "선택 → 결과 → 보상 획득까지 UI 흐름 정리",
                     media: [
-                        { type: "image", src: "/media/projects/oz-rewrite/fortune_01.png", alt: "운세 메인" },
-                        { type: "image", src: "/media/projects/oz-rewrite/fortune_02.png", alt: "선택" },
-                        { type: "image", src: "/media/projects/oz-rewrite/fortune_03.png", alt: "결과/보상" },
+                        {type: "image", src: `${IMG}/luck1.gif`, alt: "운세 창 열기"},
+                        {type: "image", src: `${IMG}/luck2.gif`, alt: "선택/보상"},
+                        {type: "image", src: `${IMG}/luck3.gif`, alt: "운세 창 닫기"},
                     ],
                     points: [
                         "3개 오브젝트 중 선택 → 서버 결과 기반 운세/보상 제공",
@@ -367,10 +375,10 @@ const ozRewrite: ProjectData = {
                     title: "왕국 스케줄(아르바이트)",
                     summary: "조건(미오픈/레벨) 반영 + 완료 연출 추가",
                     media: [
-                        { type: "image", src: "/media/projects/oz-rewrite/schedule_01.png", alt: "스케줄 메인" },
-                        { type: "image", src: "/media/projects/oz-rewrite/schedule_02.png", alt: "조건/잠금" },
-                        { type: "image", src: "/media/projects/oz-rewrite/schedule_03.png", alt: "선택/진행" },
-                        { type: "gif", src: "/media/projects/oz-rewrite/schedule_04.gif", alt: "완료 연출" },
+                        {type: "image", src: `${IMG}/kingdom_schedule_main.jpg`, alt: "스케줄 메인"},
+                        {type: "image", src: `${IMG}/kingdom_schedule1.jpg`, alt: "조건/잠금"},
+                        {type: "image", src: `${IMG}/kingdom_schedule3.jpg`, alt: "선택/진행"},
+                        {type: "gif", src: `${IMG}/schedule.gif`, alt: "완료 연출"},
                     ],
                     points: [
                         "호감도 상승을 위한 스케줄 콘텐츠",
@@ -384,10 +392,8 @@ const ozRewrite: ProjectData = {
                     title: "왕국 자판기",
                     summary: "기획 변경(레벨 잠금) 대응 + 연출 구현 지원",
                     media: [
-                        { type: "image", src: "/media/projects/oz-rewrite/vending_01.png", alt: "자판기 메인" },
-                        { type: "image", src: "/media/projects/oz-rewrite/vending_02.png", alt: "상품 리스트" },
-                        { type: "image", src: "/media/projects/oz-rewrite/vending_03.png", alt: "잠금/조건" },
-                        { type: "gif", src: "/media/projects/oz-rewrite/vending_04.gif", alt: "자판기 연출" },
+                        {type: "gif", src: `${IMG}/vendingmachine.gif`, alt: "자판기 Main1"},
+                        {type: "gif", src: `${IMG}/vendingmachine2.gif`, alt: "자판기 Main2"},
                     ],
                     points: [
                         "Gold 상품 리스트 기반 아이템 목록/구매 기능",
@@ -400,9 +406,10 @@ const ozRewrite: ProjectData = {
                     title: "왕국 정보/랭크 UI",
                     summary: "단계별 보상 확인 + 단계 상승 전용 팝업 추가",
                     media: [
-                        { type: "image", src: "/media/projects/oz-rewrite/kingdom_rank_01.png", alt: "랭크 메인" },
-                        { type: "image", src: "/media/projects/oz-rewrite/kingdom_rank_02.png", alt: "단계별 보상" },
-                        { type: "image", src: "/media/projects/oz-rewrite/kingdom_rank_03.png", alt: "단계 상승 팝업" },
+                        {type: "image", src: `${IMG}/kingdom_info_main.jpg`, alt: "왕국 정보"},
+                        {type: "image", src: `${IMG}/kingdom_info.jpg`, alt: "성장 재화 및 보상"},
+                        {type: "image", src: `${IMG}/kingdom_info2.jpg`, alt: "랭크 별 보상"},
+                        {type: "gif", src: `${IMG}/growth.gif`, alt: "누적 보상 수령"},
                     ],
                     points: [
                         "왕국 랭크 보상 수령 중심 UI를 단계별 확인 가능하도록 개선",
@@ -454,7 +461,11 @@ const ozRewrite: ProjectData = {
                 {
                     title: "스테이지 전반 조작",
                     summary: "이동/연출/보물찾기 등 확장 기반을 포함한 메인 기능 개발",
-                    media: [{ type: "video", src: "/media/projects/oz-rewrite/13_stage_main.mp4", poster: "/media/projects/oz-rewrite/poster_stage.png" }],
+                    media: [{
+                        type: "video",
+                        src: `${VID}/stage_main.mp4`,
+                        poster: `${IMG}/stage.jpg`,
+                    }],
                     points: [
                         "캐릭터 이동 연출용 Effect 기능 추가",
                         "특정 칸 이상 이동 시 순간 이동 기능 및 연출",
@@ -467,10 +478,10 @@ const ozRewrite: ProjectData = {
                     title: "스테이지 간편 이동",
                     summary: "기존 이동 UX 개선 + 미완료 미션 스테이지 진입까지 확장",
                     media: [
-                        { type: "image", src: "/media/projects/oz-rewrite/stage_jump_01.png", alt: "간편 이동 팝업" },
-                        { type: "image", src: "/media/projects/oz-rewrite/stage_jump_02.png", alt: "리스트" },
-                        { type: "image", src: "/media/projects/oz-rewrite/stage_jump_03.png", alt: "조건/상태" },
-                        { type: "gif", src: "/media/projects/oz-rewrite/stage_jump_04.gif", alt: "전환" },
+                        {type: "image", src: `${IMG}/stage_shortcut.jpg`, alt: "스테이지 바로 가기 관련 UI"},
+                        {type: "image", src: `${IMG}/stage_non_fulfillment.jpg`, alt: "미션 미달성"},
+                        {type: "image", src: `${IMG}/stage_shortcutpopup.jpg`, alt: "간편 이동 Main"},
+                        {type: "gif", src: `${IMG}/stageshortcut.gif`, alt: "Map 전환"},
                     ],
                     points: [
                         "간편 이동 전용 팝업 UI 개발",
@@ -536,14 +547,30 @@ const ozRewrite: ProjectData = {
                     title: "기본 정보",
                     summary: "레벨/장비/등급/스킬 등 핵심 정보 구성(4컷)",
                     media: [
-                        { type: "image", src: "/media/projects/oz-rewrite/hero_basic_01.png", alt: "기본 정보" },
-                        { type: "image", src: "/media/projects/oz-rewrite/hero_basic_02.png", alt: "장비" },
-                        { type: "image", src: "/media/projects/oz-rewrite/hero_basic_03.png", alt: "등급/성장" },
-                        { type: "image", src: "/media/projects/oz-rewrite/hero_basic_04.png", alt: "스킬" },
+                        {type: "image", src: `${IMG}/character_equipment.jpg`, alt: "장비"},
+                        {type: "image", src: `${IMG}/character_level.jpg`, alt: "레벨"},
+                        {type: "image", src: `${IMG}/character_grade.jpg`, alt: "등급"},
+                        {type: "image", src: `${IMG}/character_skill.jpg`, alt: "스킬"},
                     ],
                     points: [
-                        "영웅 장비 착용/강화 관련 연출",
-                        "레벨/등급 상승 전용 Popup + 단계 상승 시 강조 연출",
+                        "영웅 장비 및 레벨, 등급, 스킬 화면 리뉴얼",
+                        "각 기능별 기본 로직에 기능 및 연출 추가",
+                        "케릭터 Level 성장 로직 수정",
+                    ],
+                    notionHref: "#",
+                },
+                {
+                    title: "장비 강화",
+                    summary: "장비 강화 연출 영상",
+                    media: [{
+                        type: "video",
+                        src: `${VID}/character_equipment.mp4`,
+                        poster: `${IMG}/character_equipment_upgrade.png`,
+                    }],
+                    points: [
+                        "장비 착용 및 성장 팝업 개발",
+                        "장비 레벨 및 등급 성장 연출 추가",
+                        "경험치 관련 기본 로직 추가",
                     ],
                     notionHref: "#",
                 },
@@ -551,10 +578,11 @@ const ozRewrite: ProjectData = {
                     title: "상세 정보",
                     summary: "대표 이미지 3~4 + 상세 보기 GIF 1 (5컷)",
                     media: [
-                        { type: "image", src: "/media/projects/oz-rewrite/hero_detail_01.png", alt: "상세1" },
-                        { type: "image", src: "/media/projects/oz-rewrite/hero_detail_02.png", alt: "상세2" },
-                        { type: "image", src: "/media/projects/oz-rewrite/hero_detail_03.png", alt: "상세3" },
-                        { type: "gif", src: "/media/projects/oz-rewrite/hero_detail_04.gif", alt: "상세 보기" },
+                        {type: "image", src: `${IMG}/character_info2.jpg`, alt: "상세1"},
+                        {type: "image", src: `${IMG}/character_info.jpg`, alt: "상세2"},
+                        {type: "image", src: `${IMG}/character_world_map.jpg`, alt: "상세3"},
+                        {type: "gif", src: `${IMG}/characterInfo1.gif`, alt: "상세4"},
+                        {type: "gif", src: `${IMG}/characterInfo2.gif`, alt: "다른 컨텐츠 에서 영웅 상세 정보 Open"},
                     ],
                     points: [
                         "영웅 정보/소속 정보/소속 시너지/월드맵(World Map) 형태 정보 UI",
@@ -567,9 +595,8 @@ const ozRewrite: ProjectData = {
                     title: "스킬 태그 & 스킬 정보",
                     summary: "스킬 효과 태그 + 상세 팝업으로 정보 탐색 UX 개선",
                     media: [
-                        { type: "image", src: "/media/projects/oz-rewrite/skill_01.png", alt: "스킬 태그" },
-                        { type: "image", src: "/media/projects/oz-rewrite/skill_02.png", alt: "태그 상세" },
-                        { type: "image", src: "/media/projects/oz-rewrite/skill_03.png", alt: "스킬 설명 팝업" },
+                        {type: "image", src: `${IMG}/character_skill1.jpg`, alt: "스킬 설명 팝업"},
+                        {type: "image", src: `${IMG}/character_skill_tooltip.jpg`, alt: "스킬 태그 / 상세"},
                     ],
                     points: [
                         "스턴/흡혈/소환 등 스킬 효과 태그 기능 구현",
@@ -614,10 +641,9 @@ const ozRewrite: ProjectData = {
                     title: "소환 UI",
                     summary: "영상+배너+다수 캐릭터 구조로 전환(메모리 최적화 포함)",
                     media: [
-                        { type: "image", src: "/media/projects/oz-rewrite/summon_ui_01.png", alt: "소환 메인" },
-                        { type: "image", src: "/media/projects/oz-rewrite/summon_ui_02.png", alt: "구매1" },
-                        { type: "image", src: "/media/projects/oz-rewrite/summon_ui_03.png", alt: "구매2" },
-                        { type: "gif", src: "/media/projects/oz-rewrite/summon_ui_04.gif", alt: "구매 후 메일 이동" },
+                        {type: "image", src: `${IMG}/summon_main.jpg`, alt: "소환 메인"},
+                        {type: "gif", src: `${IMG}/summon_banner.gif`, alt: "배너 전환"},
+                        {type: "gif", src: `${IMG}/summon_video.gif`, alt: "영상 전환"},
                     ],
                     points: [
                         "캐릭터 소개 영상(CRIWARE) 전량 로드로 인한 메모리 이슈 확인",
@@ -630,9 +656,13 @@ const ozRewrite: ProjectData = {
                     title: "소환 연출 흐름",
                     summary: "영상 → 이펙트 → Fade → 캐릭터 등장 → 결과 화면(스킵 대응)",
                     media: [
-                        { type: "video", src: "/media/projects/oz-rewrite/20_summon_noskip.mp4", poster: "/media/projects/oz-rewrite/poster_summon_noskip.png" },
-                        { type: "gif", src: "/media/projects/oz-rewrite/21_summon_skip_result.gif", alt: "결과 스킵" },
-                        { type: "gif", src: "/media/projects/oz-rewrite/22_summon_skip_early.gif", alt: "초반/획득 스킵" },
+                        {
+                            type: "video",
+                            src: `${VID}/summon_no_skip.mp4`,
+                            poster: `${IMG}/summon_no_skip.png`,
+                        },
+                        {type: "gif", src: `${IMG}/summon_skip1.gif`, alt: "결과 스킵"},
+                        {type: "gif", src: `${IMG}/summon_skip2.gif`, alt: "초반 영상 스킵"},
                     ],
                     points: [
                         "연출 단계 재정리로 일관된 흐름 확보",
@@ -644,7 +674,11 @@ const ozRewrite: ProjectData = {
                 {
                     title: "Timeline 기반 연출 툴",
                     summary: "Base Timeline 제공 + Spine 커스텀 제어 확장",
-                    media: [{ type: "video", src: "/media/projects/oz-rewrite/23_summon_timeline.mp4", poster: "/media/projects/oz-rewrite/poster_timeline.png" }],
+                    media: [{
+                        type: "video",
+                        src: `${VID}/23_summon_timeline.mp4`,
+                        poster: `${IMG}/23_summon_timeline.png`,
+                    }],
                     points: [
                         "UI 팀이 Timeline으로 연출을 조정/확장 가능하도록 기반 제공",
                         "Timeline만으로 어려운 Spine 연출을 위한 Custom Timeline 기능 추가",
