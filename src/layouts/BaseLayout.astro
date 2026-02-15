@@ -8,10 +8,37 @@ import "../styles/global.css";
 </head>
 <body>
 <!-- 🔝 페이지 최상단 앵커 -->
-<div id="top"></div>
-<a class="toTop" href="#top" aria-label="맨 위로">
+<button
+    id="toTopBtn"
+    class="toTop"
+    aria-label="맨 위로"
+>
   ↑
-</a>
+</button>
+
+<script is:inline>
+  (() => {
+    const btn = document.getElementById("toTopBtn");
+    if (!btn) return;
+
+    const SHOW_AFTER = 300; // px, 이 이상 스크롤 시 표시
+
+    const onScroll = () => {
+      if (window.scrollY > SHOW_AFTER) {
+        btn.classList.add("is-visible");
+      } else {
+        btn.classList.remove("is-visible");
+      }
+    };
+
+    btn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll(); // 초기 상태 반영
+  })();
+</script>
 <slot />
 </body>
 </html>

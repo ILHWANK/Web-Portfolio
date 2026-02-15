@@ -532,27 +532,37 @@ a {
 
 .toTop {
     position: fixed;
-    left: 16px;
-    bottom: 16px;
-    width: 44px;
-    height: 44px;
+    left: 50%;
+    bottom: 24px;
+    transform: translateX(-50%) translateY(10px);
+    width: 48px;
+    height: 48px;
     border-radius: 999px;
     display: grid;
     place-items: center;
-    background: rgba(20, 20, 20, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(20, 20, 20, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     color: #fff;
-    text-decoration: none;
     font-size: 18px;
-    line-height: 1;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
     backdrop-filter: blur(6px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
     z-index: 9999;
 }
 
-    .toTop:hover {
-        transform: translateY(-2px);
+    .toTop.is-visible {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateX(-50%) translateY(0);
     }
+
+    .toTop:hover {
+        transform: translateX(-50%) translateY(-3px);
+    }
+
 
 @media (prefers-reduced-motion: no-preference) {
     html {
