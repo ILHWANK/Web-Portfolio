@@ -1,0 +1,19 @@
+---
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+import ProjectHero from "../../components/ProjectHero.astro";
+import Section from "../../components/Section.astro";
+import lwc from "../../data/projects/lwc";
+
+const p = lwc;
+---
+
+<ProjectLayout title={`프로젝트 | ${p.title}`} description={p.tagline}>
+    <ProjectHero
+            title={p.title}
+            subtitle={p.tagline}
+            hero={p.hero}
+            techStack={p.tags}
+    />
+
+    {p.sections.map((s) => <Section section={s} />)}
+</ProjectLayout>
