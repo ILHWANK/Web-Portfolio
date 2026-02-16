@@ -1,34 +1,5 @@
-export type MediaItem =
-    | { type: "image"; src: string; alt: string }
-    | { type: "gif"; src: string; alt: string }
-    | { type: "video"; src: string; poster?: string };
-
-export type FeatureCard = {
-    title: string;
-    summary: string;
-    media?: MediaItem[];
-    points?: string[];
-    notionHref?: string;
-};
-
-export type CaseSection = {
-    kind: "case";
-    id: string;
-    title: string;
-    subtitle?: string;
-    cards: FeatureCard[];
-};
-
-export type BulletsSection = {
-    kind: "bullets";
-    id: string;
-    title: string;
-    bullets: string[];
-};
-
-export type ProjectSection = CaseSection | BulletsSection;
-
 import type { ProjectData } from "./types";
+
 const ROOT = `${import.meta.env.BASE_URL}media/projects/oz-rewrite`;
 const IMG = `${ROOT}/image`;
 const VID = `${ROOT}/video`;
