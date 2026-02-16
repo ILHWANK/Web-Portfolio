@@ -28,17 +28,7 @@ export type BulletsSection = {
 
 export type ProjectSection = CaseSection | BulletsSection;
 
-export type ProjectData = {
-    slug: string;
-    title: string;
-    tagline?: string;
-    headline?: string;
-    description?: string;
-    tags?: string[];
-    primaryMedia?: MediaItem;
-    sections: ProjectSection[];
-};
-
+import type { ProjectData } from "./types";
 const ROOT = `${import.meta.env.BASE_URL}media/projects/oz-rewrite`;
 const IMG = `${ROOT}/image`;
 const VID = `${ROOT}/video`;
@@ -47,6 +37,10 @@ const ozRewrite: ProjectData = {
     slug: "oz-rewrite",
     title: "OZ:Rewrite",
     tagline: "Unity(UGUI) 기반 라이브 서비스 클라이언트",
+    thumb: {
+        src: `${IMG}/ozrewrite.jpg`,
+        alt: "OZ:Rewrite 썸네일",
+    },
     headline: "라이브 서비스 UI·연출·최적화 사례를 미디어 중심으로 정리",
     description:
         "상점·친구·메일·미션·인벤토리 등 핵심 UI 콘텐츠와 이벤트 미니게임/왕국/스테이지/영웅 정보/소환 시스템을 설계·구현하고, 운영 이슈를 구조적으로 개선했습니다.",

@@ -28,18 +28,8 @@ export type BulletsSection = {
 
 export type ProjectSection = CaseSection | BulletsSection;
 
-export type ProjectData = {
-    slug: string;
-    title: string;
-    tagline?: string;
-    headline?: string;
-    description?: string;
-    tags?: string[];
-    primaryMedia?: MediaItem;
-    sections: ProjectSection[];
-};
+import type { ProjectData } from "./types";
 
-// ✅ 공용 경로(너가 정리한 폴더 구조 기준)
 const ROOT = `${import.meta.env.BASE_URL}media/projects/lwc`;
 const IMG = `${ROOT}/image`;
 const VID = `${ROOT}/video`;
@@ -48,6 +38,11 @@ const lwc: ProjectData = {
     slug: "lwc",
     title: "편지와 마녀의 아이 (LWC)",
     tagline: "스토리 중심 2D 싱글 플레이 (Unity 2023.2.20)",
+    // ✅ 홈 카드에서 쓸 썸네일
+    thumb: {
+        src: `${import.meta.env.BASE_URL}media/projects/lwc/image/thumbnail.jpg`,
+        alt: "편지와 마녀의 아이 썸네일",
+    },
     headline: "플레이 흐름 기반으로 UI·데이터·연출·리소스를 구조화하며 확장성을 검증한 개인 프로젝트",
     description:
         "기능 나열이 아니라 ‘실제 플레이 흐름’을 기준으로 시스템을 설계하고, 데이터 변경이 UI/플레이에 자연스럽게 반영되도록 구조를 검증하고 있습니다.",
