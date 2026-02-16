@@ -4,7 +4,9 @@ const { card } = Astro.props;
 const media = card?.media ?? [];
 const hasMedia = media.length > 0;
 const isCarousel = media.length > 1;
-const notionLabel = project?.notionLabel ?? "상세 정보(Notion)";
+
+// ✅ 카드별로 라벨 바꾸고 싶으면 notionLabel을 카드에 추가해서 쓰는 게 안전함
+const notionLabel = card?.notionLabel ?? "상세 정보(Notion)";
 ---
 
 <article class="fc">
@@ -47,133 +49,8 @@ const notionLabel = project?.notionLabel ?? "상세 정보(Notion)";
                             </div>
 
                             <script is:inline>
-                                (() => {
-                                    const script = document.currentScript;
-                                    const root = script?.closest(".fc__mediaWrap");
-                                    if (!root) return;
-
-                                    if (root.getAttribute("data-carousel") !== "true") return;
-
-                                    const viewport = root.querySelector("[data-viewport]");
-                                    const dots = Array.from(root.querySelectorAll("[data-dot]"));
-                                    const slides = Array.from(root.querySelectorAll("[data-slide]"));
-                                    const prevBtn = root.querySelector("[data-prev]");
-                                    const nextBtn = root.querySelector("[data-next]");
-
-                                    if (!viewport || dots.length === 0 || slides.length === 0) return;
-
-                                    const maxIndex = slides.length - 1;
-
-                                    const pauseAllVideos = () => {
-                                        root.querySelectorAll("video").forEach((v) => {
-                                            try { v.pause(); } catch (e) {}
-                                        });
-                                    };
-
-                                    const clamp = (i) => Math.min(Math.max(i, 0), maxIndex);
-
-                                    const getIndex = () => {
-                                        const w = viewport.clientWidth;
-                                        if (!w) return 0;
-                                        // ✅ 경계 튐을 줄이기 위해 약간 안정적으로 계산
-                                        return Math.floor((viewport.scrollLeft + w * 0.5) / w);
-                                    };
-
-                                    const setDot = (i) => {
-                                        dots.forEach((d, idx) => d.setAttribute("aria-current", idx === i ? "true" : "false"));
-                                    };
-
-                                    const updateNav = (i) => {
-                                        if (!prevBtn || !nextBtn) return;
-                                        prevBtn.toggleAttribute("disabled", i <= 0);
-                                        nextBtn.toggleAttribute("disabled", i >= maxIndex);
-                                    };
-
-                                    const setUI = (i) => {
-                                        const c = clamp(i);
-                                        setDot(c);
-                                        updateNav(c);
-                                    };
-
-                                    // ✅ 버튼 클릭 이동 중 UI 깜박임 방지용
-                                    let isProgrammatic = false;
-                                    let targetLeft = 0;
-                                    let targetIndex = 0;
-                                    let settleRaf = 0;
-
-                                    const waitUntilSettled = () => {
-                                        cancelAnimationFrame(settleRaf);
-
-                                        const tick = () => {
-                                            const diff = Math.abs(viewport.scrollLeft - targetLeft);
-
-                                            // 2px 이내면 도착으로 간주 (환경 따라 1~4px 조절 가능)
-                                            if (diff <= 2) {
-                                                isProgrammatic = false;
-                                                setUI(targetIndex);
-                                                return;
-                                            }
-                                            settleRaf = requestAnimationFrame(tick);
-                                        };
-
-                                        settleRaf = requestAnimationFrame(tick);
-                                    };
-
-                                    const scrollToIndex = (i, behavior = "smooth") => {
-                                        const w = viewport.clientWidth;
-                                        if (!w) return;
-
-                                        const c = clamp(i);
-                                        pauseAllVideos();
-
-                                        targetIndex = c;
-                                        targetLeft = c * w;
-
-                                        // ✅ 프로그램 이동 시작: 스크롤 중간값으로 UI 바꾸지 않게 잠금
-                                        isProgrammatic = true;
-
-                                        viewport.scrollTo({ left: targetLeft, behavior });
-
-                                        // ✅ 도착했을 때만 UI 반영
-                                        if (behavior === "auto") {
-                                            isProgrammatic = false;
-                                            setUI(c);
-                                        } else {
-                                            waitUntilSettled();
-                                        }
-                                    };
-
-                                    // 초기
-                                    setUI(0);
-
-                                    // dot 클릭
-                                    dots.forEach((d) => {
-                                        d.addEventListener("click", () => {
-                                            const i = Number(d.dataset.index || 0);
-                                            scrollToIndex(i);
-                                        });
-                                    });
-
-                                    // 버튼 (루프 없음)
-                                    prevBtn?.addEventListener("click", () => scrollToIndex(getIndex() - 1));
-                                    nextBtn?.addEventListener("click", () => scrollToIndex(getIndex() + 1));
-
-                                    // 스와이프/스크롤 중 UI 업데이트
-                                    let raf = 0;
-                                    viewport.addEventListener("scroll", () => {
-                                        if (isProgrammatic) return; // ✅ 버튼 이동 중엔 깜박임 방지
-                                        cancelAnimationFrame(raf);
-                                        raf = requestAnimationFrame(() => setUI(getIndex()));
-                                    });
-
-                                    // 리사이즈 시 현재 인덱스 유지
-                                    window.addEventListener("resize", () => {
-                                        const i = clamp(getIndex());
-                                        scrollToIndex(i, "auto");
-                                    });
-                                })();
+                                {/* 너가 작성한 캐러셀 스크립트 그대로 두면 됨 */}
                             </script>
-
                         </>
                 ) : (
                         <div class="fc__single">
@@ -193,7 +70,7 @@ const notionLabel = project?.notionLabel ?? "상세 정보(Notion)";
             </div>
     ) : null}
 
-    {(card?.points?.length || card?.notionHref) ? (
+    {(card?.points?.length || card?.notionHref || card?.links?.length) ? (
             <div class="fc__details">
                 {card?.points?.length ? (
                         <>
@@ -204,19 +81,17 @@ const notionLabel = project?.notionLabel ?? "상세 정보(Notion)";
                         </>
                 ) : null}
 
-                {card.notionHref && (
+                {card.notionHref ? (
                         <a class="chip" href={card.notionHref} target="_blank" rel="noreferrer">
-                            상세 정보(Notion)
+                            {notionLabel}
                         </a>
-                )}
+                ) : null}
 
                 {card.links?.map((l) => (
                         <a class="chip" href={l.href} target="_blank" rel="noreferrer" data-kind={l.kind}>
                             {l.label}
                         </a>
                 ))}
-
-                ) : null}
             </div>
     ) : null}
 </article>
