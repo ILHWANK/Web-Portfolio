@@ -102,9 +102,8 @@ const lwc: ProjectData = {
                         "저장은 ThreadPool에서 파일 IO 처리(메인 스레드 부담 최소화)",
                         "관련: TitleUIController / LoadingUIController / GameDataManager / GameData",
                     ],
-                    notionHref: "#https://www.notion.so/Project-LWC-2026-01-27-2ce7c7e6db098009a8b4c7b579e4f103?source=copy_link#2d37c7e6db09807d8f9de76ae32e44a7",
                     links: [
-                        { label: "관련 코드(Notion)", href: "#https://www.notion.so/Project-LWC-2026-01-27-2ce7c7e6db098009a8b4c7b579e4f103?source=copy_link#2d37c7e6db09807d8f9de76ae32e44a7", kind: "code" }
+                        { label: "관련 코드(Notion)", href: "https://www.notion.so/Project-LWC-2026-01-27-2ce7c7e6db098009a8b4c7b579e4f103?source=copy_link#2d37c7e6db09807d8f9de76ae32e44a7", kind: "code" }
                     ],
                 },
 
