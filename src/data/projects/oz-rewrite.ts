@@ -6,8 +6,8 @@ const VID = `${ROOT}/video`;
 
 const ozRewrite: ProjectData = {
     slug: "oz-rewrite",
-    title: "OZ:Rewrite",
-    tagline: "Unity(UGUI) 기반 라이브 서비스 클라이언트",
+    title: "OZ:Rewrite (실무 프로젝트)",
+    tagline: "라이브 서비스 핵심 UI 설계·운영(연출·최적화)",
     thumb: {
         src: `${IMG}/ozrewrite.jpg`,
         alt: "OZ:Rewrite 썸네일",
