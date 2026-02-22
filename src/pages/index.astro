@@ -27,21 +27,23 @@ const subline =
             <p class="muted">{subline}</p>
 
             <div class="spacer"></div>
-
-            {projects.map((p) => (
-                    <a class="card" href={`${import.meta.env.BASE_URL}projects/${p.slug}/`}>
-                        <img
-                                class="card__thumb"
-                                src={p.thumb?.src}
-                                alt={p.thumb?.alt ?? `${p.title} 썸네일`}
-                                loading="lazy"
-                        />
-                        <div class="card__body">
-                            <h2 class="h2">{p.title}</h2>
-                            <p class="muted">{p.tagline ?? ""}</p>
-                        </div>
-                    </a>
-            ))}
+            
+            <div class="cards">
+                {projects.map((p) => (
+                        <a class="card" href={`${import.meta.env.BASE_URL}projects/${p.slug}/`}>
+                            <img
+                                    class="card__thumb"
+                                    src={p.thumb?.src}
+                                    alt={p.thumb?.alt ?? `${p.title} 썸네일`}
+                                    loading="lazy"
+                            />
+                            <div class="card__body">
+                                <h2 class="h2">{p.title}</h2>
+                                <p class="muted">{p.tagline ?? ""}</p>
+                            </div>
+                        </a>
+                ))}
+            </div>
         </section>
     </main>
 
