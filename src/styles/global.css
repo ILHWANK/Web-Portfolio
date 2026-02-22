@@ -10,6 +10,12 @@
 * {
     box-sizing: border-box;
 }
+/* 기본 타이포 여백 초기화 */
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, li, figure, blockquote {
+    margin: 0;
+    padding: 0;
+}
 
 html, body {
     height: 100%;
