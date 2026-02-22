@@ -15,7 +15,7 @@ const ozRewrite: ProjectData = {
     headline: "라이브 서비스 UI·연출·최적화 사례를 미디어 중심으로 정리",
     description:
         "상점·친구·메일·미션·인벤토리 등 핵심 UI 콘텐츠와 이벤트 미니게임/왕국/스테이지/영웅 정보/소환 시스템을 설계·구현하고, 운영 이슈를 구조적으로 개선했습니다.",
-    tags: ["Unity", "UGUI", "Addressables", "UniTask", "Timeline", "Spine"],
+    tags: ["Unity", "UGUI", "Addressables", "TextMeshPro", "UniTask", "Timeline", "Spine"],
 
     sections: [
         // -----------------------------
@@ -131,7 +131,7 @@ const ozRewrite: ProjectData = {
                         "구매 확인/결과/경고 등 구매 관련 팝업 UI 전반 개발",
                         "구조 재사용으로 이후 ‘왕국 자판기’ 콘텐츠를 빠르게 구현(상점 Prefab/Code Common 공용화 포함)",
                     ],
-                    notionHref: "#",
+                    notionHref: "https://www.notion.so/OZ-Rewrite-2ff7c7e6db098058b74adc5226909065?source=copy_link#2ff7c7e6db09809f9c02c99b3bed9d3a",
                 },
 
                 {
@@ -148,7 +148,7 @@ const ozRewrite: ProjectData = {
                         "예: 50개 단위 요청 → 40개 열람 시 51~100 추가 요청",
                         "TCP 딜레이 체감을 줄이기 위해 약간의 여유를 두고 다음 구간을 선요청",
                     ],
-                    notionHref: "#",
+                    notionHref: "https://www.notion.so/OZ-Rewrite-2ff7c7e6db098058b74adc5226909065?source=copy_link#2ff7c7e6db0980f0ba06c126aca3c186",
                 },
 
                 {
@@ -166,7 +166,7 @@ const ozRewrite: ProjectData = {
                         "UID → IMID 검색 기준 변경에 맞춰 검색/유효성 검사 로직 수정",
                         "친구 등록/정보 확인용 Info Popup 개발",
                     ],
-                    notionHref: "#",
+                    notionHref: "https://www.notion.so/OZ-Rewrite-2ff7c7e6db098058b74adc5226909065?source=copy_link#2ff7c7e6db0980dc8f3cede935fd31e9",
                 },
 
                 {
@@ -182,7 +182,7 @@ const ozRewrite: ProjectData = {
                         "일일/주간/업적/전체 미션 기능 전반 개발",
                         "이벤트 미션에도 재사용 가능하도록 기본 로직/ UI 분리 설계",
                     ],
-                    notionHref: "#",
+                    notionHref: "https://www.notion.so/OZ-Rewrite-2ff7c7e6db098058b74adc5226909065?source=copy_link#2ff7c7e6db0980f0ba06c126aca3c186",
                 },
 
                 {
@@ -200,7 +200,7 @@ const ozRewrite: ProjectData = {
                         "만료/이벤트 아이템 변환 재화 안내 팝업",
                         "서버와 협업해 만료 시점을 통일 → 불필요 Packet 최소화",
                     ],
-                    notionHref: "#",
+                    notionHref: "https://www.notion.so/OZ-Rewrite-2ff7c7e6db098058b74adc5226909065?source=copy_link#2ff7c7e6db09804d8af4cc784dd441aa",
                 },
 
                 {
@@ -218,7 +218,7 @@ const ozRewrite: ProjectData = {
                         "이벤트 재화 보너스/효과 관련 팝업 및 UI 작업",
                         "이벤트 상점/미션은 기존 구조/코드 재사용하여 개발",
                     ],
-                    notionHref: "#",
+                    notionHref: "https://www.notion.so/OZ-Rewrite-2ff7c7e6db098058b74adc5226909065?source=copy_link#3017c7e6db0980c89f6df7428eec9fbe",
                 },
 
                 {
@@ -230,7 +230,7 @@ const ozRewrite: ProjectData = {
                         "UI 구조/Addressables 구조 변경 대응: 기존 코드 전반 정리·수정",
                         "해상도 대응 컴포넌트(ResolutionBG/Fit/Effect) 개발 + SafeArea 고려",
                     ],
-                    notionHref: "#",
+                    notionHref: "https://www.notion.so/OZ-Rewrite-2ff7c7e6db098058b74adc5226909065?source=copy_link#2ff7c7e6db09808694b8cd89cf23a0f8",
                 },
             ],
         },
@@ -282,7 +282,7 @@ const ozRewrite: ProjectData = {
                         "공통 행동은 State로 관리(Idle/Tagger 등)",
                         "미니게임 맵 선제 제작으로 아트 협업 지원",
                     ],
-                    notionHref: "#",
+                    notionHref: "https://www.notion.so/OZ-Rewrite-2ff7c7e6db098058b74adc5226909065?source=copy_link#2ff7c7e6db09800aa7c0cd89cbbbd817",
                 },
                 {
                     title: "타일 깨기",
@@ -299,7 +299,7 @@ const ozRewrite: ProjectData = {
                         "NPC 대사/라운드 전환/폭탄 다중 파괴 기능",
                         "보상 조건 달성 시 다음 라운드로 진행되는 구조",
                     ],
-                    notionHref: "#",
+                    notionHref: "https://www.notion.so/OZ-Rewrite-2ff7c7e6db098058b74adc5226909065?source=copy_link#2ff7c7e6db0980a986afd8418d2df433",
                 },
                 {
                     title: "영웅 투표",
@@ -316,7 +316,7 @@ const ozRewrite: ProjectData = {
                         "투표 시 캐릭터 투표 연출 적용 + 재화 상태에 따른 분기",
                         "라운드 종료 MVP 여부에 따른 차별화 연출",
                     ],
-                    notionHref: "#",
+                    notionHref: "https://www.notion.so/OZ-Rewrite-2ff7c7e6db098058b74adc5226909065?source=copy_link#2ff7c7e6db098024937ec2d9380077ce",
                 },
             ],
         },
@@ -364,7 +364,7 @@ const ozRewrite: ProjectData = {
                         "상호작용 이슈 수정 + 연출 추가가 가능한 상태로 개선",
                         "NavMesh 생성/MapResource 생성 흐름 정리·단순화",
                     ],
-                    notionHref: "#",
+                    notionHref: "https://www.notion.so/OZ-Rewrite-2ff7c7e6db098058b74adc5226909065?source=copy_link#2ff7c7e6db0980deb9d7cf78934c9c37",
                 },
                 {
                     title: "왕국 선물",
@@ -379,7 +379,7 @@ const ozRewrite: ProjectData = {
                         "호감도 연출 유무에 따라 애니메이션 재생 타이밍 분기",
                         "이벤트 진행 시 NPC 추가를 위한 테이블/등장 연출 로직 개선",
                     ],
-                    notionHref: "#",
+                    notionHref: "https://www.notion.so/OZ-Rewrite-2ff7c7e6db098058b74adc5226909065?source=copy_link#2ff7c7e6db0980619d74d587f162283a",
                 },
                 {
                     title: "왕국 운세",
@@ -394,7 +394,7 @@ const ozRewrite: ProjectData = {
                         "운세 전/후 왕국 내 건물 이미지 변경",
                         "재오픈 시 이전 결과 표기",
                     ],
-                    notionHref: "#",
+                    notionHref: "https://www.notion.so/OZ-Rewrite-2ff7c7e6db098058b74adc5226909065?source=copy_link#2ff7c7e6db09806c89e8f23ac0918e10",
                 },
                 {
                     title: "왕국 스케줄(아르바이트)",
@@ -411,7 +411,7 @@ const ozRewrite: ProjectData = {
                         "미오픈/건물 레벨 조건 추가 및 수정",
                         "스케줄 완료 연출 추가",
                     ],
-                    notionHref: "#",
+                    notionHref: "https://www.notion.so/OZ-Rewrite-2ff7c7e6db098058b74adc5226909065?source=copy_link#2ff7c7e6db09806c89e8f23ac0918e10",
                 },
                 {
                     title: "왕국 자판기",
@@ -450,7 +450,7 @@ const ozRewrite: ProjectData = {
                         "타이밍 맞추기 미니게임",
                         "결과 요리 생성 → 초대 영웅 선택 → 초대 연출 → 버프/호감도 적용",
                     ],
-                    notionHref: "#",
+                    notionHref: "https://www.notion.so/OZ-Rewrite-2ff7c7e6db098058b74adc5226909065?source=copy_link#2ff7c7e6db0980ca80a9d0c52bdd5b8d",
                 },
             ],
         },
@@ -497,7 +497,7 @@ const ozRewrite: ProjectData = {
                         "대표 캐릭터 변경 시 StageMap SD 표시 연동",
                         "보물 찾기 기능 추가",
                     ],
-                    notionHref: "#",
+                    notionHref: "https://www.notion.so/OZ-Rewrite-2ff7c7e6db098058b74adc5226909065?source=copy_link#2ff7c7e6db0980868137d2bd2b823164",
                 },
                 {
                     title: "스테이지 간편 이동",
@@ -512,7 +512,7 @@ const ozRewrite: ProjectData = {
                         "간편 이동 전용 팝업 UI 개발",
                         "미션 미완료 스테이지로도 이동 가능하도록 확장",
                     ],
-                    notionHref: "#",
+                    notionHref: "https://www.notion.so/OZ-Rewrite-2ff7c7e6db098058b74adc5226909065?source=copy_link#2ff7c7e6db09808a9d16fb35fb5c98e6",
                 },
                 {
                     title: "제작 툴 & 2D→3D 전환",
@@ -524,7 +524,6 @@ const ozRewrite: ProjectData = {
                         "Cinemachine FOV 렌즈 효과로 2D 이미지 기반 입체감 연출",
                         "레이어 정렬 규칙 확정",
                     ],
-                    notionHref: "#",
                 },
                 {
                     title: "로드/메모리 관리 개선",
@@ -534,7 +533,6 @@ const ozRewrite: ProjectData = {
                         "ResourceManager로 이전 맵 리소스를 즉시 해제하도록 수정",
                         "로드/해제 체감 지연은 Fade 연출로 흡수",
                     ],
-                    notionHref: "#",
                 },
             ],
         },
@@ -582,7 +580,7 @@ const ozRewrite: ProjectData = {
                         "각 기능별 기본 로직에 기능 및 연출 추가",
                         "케릭터 Level 성장 로직 수정",
                     ],
-                    notionHref: "#",
+                    notionHref: "https://www.notion.so/OZ-Rewrite-2ff7c7e6db098058b74adc5226909065?source=copy_link#2ff7c7e6db0980e58c7bf7a946a76b9e",
                 },
                 {
                     title: "장비 강화",
@@ -597,7 +595,7 @@ const ozRewrite: ProjectData = {
                         "장비 레벨 및 등급 성장 연출 추가",
                         "경험치 관련 기본 로직 추가",
                     ],
-                    notionHref: "#",
+                    notionHref: "https://www.notion.so/OZ-Rewrite-2ff7c7e6db098058b74adc5226909065?source=copy_link#2ff7c7e6db0980e58c7bf7a946a76b9e",
                 },
                 {
                     title: "상세 정보",
@@ -614,7 +612,7 @@ const ozRewrite: ProjectData = {
                         "영웅 전용 Addressables → Common 데이터 구조로 변경해 다른 화면에서도 재사용",
                         "리뉴얼 대응: 기존 구조 유지하면서 UI 변경에 맞춰 로직 정리",
                     ],
-                    notionHref: "#",
+                    notionHref: "https://www.notion.so/OZ-Rewrite-2ff7c7e6db098058b74adc5226909065?source=copy_link#2ff7c7e6db098084896fe39521902554",
                 },
                 {
                     title: "스킬 태그 & 스킬 정보",
@@ -629,7 +627,7 @@ const ozRewrite: ProjectData = {
                         "특정 레벨 이후 확장 효과 반영을 위한 테이블 구조 방향 협의/반영",
                         "정보 창 내부/외부 모두 동일 기준으로 표시되도록 구조 정리",
                     ],
-                    notionHref: "#",
+                    notionHref: "https://www.notion.so/OZ-Rewrite-2ff7c7e6db098058b74adc5226909065?source=copy_link#2ff7c7e6db098003a100fc6092dc20e5",
                 },
             ],
         },
@@ -746,7 +744,7 @@ const ozRewrite: ProjectData = {
                 "설계: 라이브 서비스 핵심 UI 전반 설계·구현, 의존성 조율, 확장 가능한 구조로 리팩토링",
                 "비동기/연출: UniTask 흐름 제어, DOTween UI 애니메이션, Timeline 기반 연출 구조/커스텀 확장, CRIWARE 로드/해제 최적화",
                 "리소스/최적화: Addressables 로드·캐시·해제 전략, Profiler/Xcode Instruments/Memory Profiler로 분석",
-                "플레이/맵: LoopScrollRect 대량 리스트, NavMesh 이동/상호작용, Cinemachine 카메라 연출, Spine 상태 애니메이션, Shader 적용/수정",
+                "플레이/맵: LoopScrollRect 대량 리스트, TextMeshPro 를 활용한 태그, NavMesh 이동/상호작용, Cinemachine 카메라 연출, Spine 상태 애니메이션, Shader 수정",
                 "역량: OOP 기반 역할 분리, Factory/Strategy/State/Command 패턴 적용, 툴 제작(EditorWindow)로 제작 효율 향상",
             ],
         },
