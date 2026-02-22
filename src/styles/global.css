@@ -137,7 +137,7 @@ a {
 
 .card {
     display: grid;
-    grid-template-columns: 124px 1fr;
+    grid-template-columns: 140px 1fr;
     gap: 14px;
     padding: 14px;
     border: 1px solid var(--line);
@@ -147,7 +147,7 @@ a {
 
 .card__thumb {
     width: 140px;
-    height: 90px;
+    height: 80px;
     object-fit: cover;
     border-radius: 12px;
     border: 1px solid var(--line);
@@ -156,7 +156,7 @@ a {
 .card__body {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+/*    gap: 6px;*/
 }
 
 .tags {
