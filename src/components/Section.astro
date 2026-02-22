@@ -1,17 +1,56 @@
 ---
 import FeatureCard from "./FeatureCard.astro";
 import { marked } from "marked";
+
 const { section } = Astro.props;
+
+const isBullets = section?.kind === "bullets";
+const hasGroups = isBullets && Array.isArray(section.groups) && section.groups.length > 0;
+
+const renderInline = (s) => marked.parseInline(s ?? "");
 ---
 
 <section class="section" id={section.id}>
     <h2 class="h2">{section.title}</h2>
     {section.subtitle ? <p class="lead">{section.subtitle}</p> : null}
 
-    {section.kind === "bullets" ? (
-            <ul class="list">
-                {(section.bullets ?? []).map((b) => <li set:html={marked.parseInline(b)} />)}
-            </ul>
+    {isBullets ? (
+            <>
+                {section.lead ? <p class="muted" set:html={renderInline(section.lead)} /> : null}
+
+                {hasGroups ? (
+                        <div class="bulletGroups">
+                            {section.groups.map((g, gi) => (
+                                    <div class="bulletGroup">
+                                        <h3 class="h3">{g.title}</h3>
+
+                                        <ul class="list">
+                                            {g.items.map((it) => (
+                                                typeof it === "string" ? (
+                                                        <li set:html={renderInline(it)} />
+                                                ) : (
+                                                        <li>
+                                                            <span set:html={renderInline(it.text)} />
+                                                            {it.sub?.length ? (
+                                                                    <ul class="list list--sub">
+                                                                        {it.sub.map((s) => <li set:html={renderInline(s)} />)}
+                                                                    </ul>
+                                                            ) : null}
+                                                        </li>
+                                                )
+                                            ))}
+                                        </ul>
+
+                                        {gi < section.groups.length - 1 ? <hr class="divider" /> : null}
+                                    </div>
+                            ))}
+                        </div>
+                ) : (
+                        <ul class="list">
+                            {(section.bullets ?? []).map((b) => <li set:html={renderInline(b)} />)}
+                        </ul>
+                )}
+            </>
     ) : (
             <div class="cardGrid">
                 {section.cards.map((c) => <FeatureCard card={c} />)}

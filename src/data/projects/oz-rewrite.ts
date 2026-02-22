@@ -24,30 +24,70 @@ const ozRewrite: ProjectData = {
         {
             kind: "bullets",
             id: "tech-stack",
-            title: "0. 기술 스택",
-            bullets: [
-                "라이브 서비스 환경에서 UI·연출·리소스·성능·툴링을 한 흐름으로 운영하며, 변화(기획·구조·재화)를 흡수할 수 있게 구조화한 경험",
-                "UI / 콘텐츠",
-                ": Unity UGUI, LoopScrollRect, TextMeshPro(링크/태그 커스텀)",
-                ": Spine(연출/상태 기반), Shader(전환 품질 이슈 수정)",
-                "비동기 / 연출",
-                ": UniTask(async 흐름/취소/조합), Coroutine(프레임 기반)",
-                ": DOTween(UI 트윈), Timeline(연출 시퀀스/툴화)",
-                "리소스 / 모듈",
-                ": Addressables(로드·캐시·해제/번들 운영), Assembly(도메인 분리/의존성 정리)",
-                "미디어 / 카메라 / 이동",
-                ": CRIWARE(영상·오디오 연출), Cinemachine(카메라 연출), NavMesh(2D 이소메트릭 이동/미니게임)",
-                "분석 / 최적화",
-                ": Unity Profiler(프레임/CPU/GPU/GC), Memory Profiler(스냅샷/참조 추적)",
-                ": Xcode Instruments(iOS 메모리 이슈/크래시 시점 추적)",
-                "협업 / 파이프라인",
-                ": Jenkins(Dev/QA 빌드), Jira/Confluence/Slack, Rider",
-                "대표 적용 사례(아래 섹션으로 이동)",
-                `: Addressables + 메모리 해제 타이밍 설계 → [6. 소환 시스템 & 연출 최적화](#summon-overview)`,
-                `: 점진 로딩/서버 부하 고려 UI 구조 → [1. 메일 시스템](#core-ui-cases)`,
-                `: 패턴 기반 미니게임 구조화 → [2. 이벤트용 미니게임 시스템](#event-minigame-overview)`,
-                `: 제작 효율용 툴링(Editor) → [4. 스테이지 시스템 & 개발 툴](#stage-overview)`,
-                `: Common 전환/공용 구조화(재사용) → [1. 핵심 UI](#core-ui-overview) · [3. 왕국](#kingdom-overview) · [5. 영웅 정보](#hero-overview)`,
+            title: "기술 및 개발 경험",
+            lead:
+                "라이브 서비스 환경에서 UI·연출·리소스·성능·툴링을 하나의 흐름으로 운영하며,<br/>기획 변경과 구조 변화에 대응할 수 있도록 구조화된 시스템을 설계·개발했습니다.",
+            groups: [
+                {
+                    title: "UI · 콘텐츠",
+                    items: [
+                        "Unity UGUI 기반 UI 시스템 개발",
+                        "LoopScrollRect 기반 대량 데이터 UI 구성",
+                        "TextMeshPro 확장 (링크 및 태그 커스텀)",
+                        "Spine 기반 캐릭터 연출 시스템",
+                        "Shader 수정 및 전환 품질 개선",
+                    ],
+                },
+                {
+                    title: "비동기 · 연출",
+                    items: [
+                        "UniTask 기반 async 흐름 설계 및 취소 처리",
+                        "Coroutine 기반 프레임 제어 로직",
+                        "DOTween 기반 UI 연출",
+                        "Timeline 기반 연출 시퀀스 구성",
+                    ],
+                },
+                {
+                    title: "리소스 · 구조",
+                    items: [
+                        "Addressables 기반 로드 · 캐시 · 해제 구조 설계",
+                        "번들 단위 리소스 운영 경험",
+                        "Assembly 기반 도메인 분리 및 의존성 정리",
+                    ],
+                },
+                {
+                    title: "미디어 · 카메라 · 이동",
+                    items: [
+                        "CRIWARE 영상 · 오디오 연출",
+                        "Cinemachine 카메라 연출",
+                        "NavMesh 기반 2D 이소메트릭 이동 구현",
+                    ],
+                },
+                {
+                    title: "분석 · 최적화",
+                    items: [
+                        { text: "Unity Profiler 기반 성능 분석", sub: ["Frame / CPU / GPU / GC 분석"] },
+                        { text: "Memory Profiler 기반 메모리 분석", sub: ["Snapshot 및 참조 추적"] },
+                        { text: "Xcode Instruments 기반 iOS 메모리 분석", sub: ["메모리 이슈 및 크래시 추적"] },
+                    ],
+                },
+                {
+                    title: "협업 · 파이프라인",
+                    items: [
+                        "Jenkins 기반 Dev / QA 빌드 자동화",
+                        "Jira · Confluence · Slack 협업 환경",
+                        "Rider 개발 환경",
+                    ],
+                },
+                {
+                    title: "대표 적용 사례",
+                    items: [
+                        `Addressables 메모리 해제 구조 설계 → <a href="#summon-overview">6. 소환 시스템 & 연출 최적화</a>`,
+                        `점진 로딩 UI 구조 설계 → <a href="#core-ui-cases">1. 메일 시스템</a>`,
+                        `패턴 기반 미니게임 구조화 → <a href="#event-minigame-overview">2. 이벤트용 미니게임 시스템</a>`,
+                        `Editor Tool 제작 → <a href="#stage-overview">4. 스테이지 시스템 & 개발 툴</a>`,
+                    ],
+                },
             ],
         },
 

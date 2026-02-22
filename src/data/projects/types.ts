@@ -4,9 +4,9 @@ export type MediaItem =
     | { type: "video"; src: string; poster?: string };
 
 export type CardLink = {
-    label: string;           // 버튼에 보일 텍스트
-    href: string;            // 링크
-    kind?: "code" | "doc" | "issue" | "etc"; // 선택(필터/스타일용)
+    label: string;
+    href: string;
+    kind?: "code" | "doc" | "issue" | "etc";
 };
 
 export type FeatureCard = {
@@ -26,19 +26,37 @@ export type CaseSection = {
     cards: FeatureCard[];
 };
 
+// ✅ 추가: 중첩 bullet 지원
+export type BulletItem =
+    | string
+    | {
+    text: string;      // 메인 bullet
+    sub?: string[];    // 하위 bullet(동그라미/들여쓰기용)
+};
+
+export type BulletGroup = {
+    title: string;         // "UI · 콘텐츠" 같은 그룹 제목
+    items: BulletItem[];   // 그룹 내 bullet들
+};
+
 export type BulletsSection = {
     kind: "bullets";
     id: string;
     title: string;
-    bullets: string[];
+
+    // ✅ 추가: 섹션 상단 리드 문장(이미지의 2줄 설명)
+    lead?: string;
+
+    // ✅ 추가: 그룹형 렌더링
+    groups?: BulletGroup[];
+
+    // ✅ 기존 유지: 단순 bullets도 계속 지원
+    bullets?: string[];
 };
 
 export type ProjectSection = CaseSection | BulletsSection;
 
-export type ProjectThumb = {
-    src: string;
-    alt: string;
-};
+export type ProjectThumb = { src: string; alt: string };
 
 export type ProjectData = {
     slug: string;
