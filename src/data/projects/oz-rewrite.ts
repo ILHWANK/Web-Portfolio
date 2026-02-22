@@ -1,4 +1,4 @@
-import type { ProjectData } from "./types";
+import type {ProjectData} from "./types";
 
 const ROOT = `${import.meta.env.BASE_URL}/media/projects/oz-rewrite`;
 const IMG = `${ROOT}/image`;
@@ -29,7 +29,7 @@ const ozRewrite: ProjectData = {
                 "라이브 서비스 환경에서 UI·연출·리소스·성능·툴링을 하나의 흐름으로 운영하며,<br/>기획 변경과 구조 변화에 대응할 수 있도록 구조화된 시스템을 설계·개발했습니다.",
             groups: [
                 {
-                    title: "UI · 콘텐츠",
+                    title: "[UI · 콘텐츠]",
                     items: [
                         "Unity UGUI 기반 UI 시스템 개발",
                         "LoopScrollRect 기반 대량 데이터 UI 구성",
@@ -39,7 +39,7 @@ const ozRewrite: ProjectData = {
                     ],
                 },
                 {
-                    title: "비동기 · 연출",
+                    title: "[비동기 · 연출]",
                     items: [
                         "UniTask 기반 async 흐름 설계 및 취소 처리",
                         "Coroutine 기반 프레임 제어 로직",
@@ -48,7 +48,7 @@ const ozRewrite: ProjectData = {
                     ],
                 },
                 {
-                    title: "리소스 · 구조",
+                    title: "[리소스 · 구조]",
                     items: [
                         "Addressables 기반 로드 · 캐시 · 해제 구조 설계",
                         "번들 단위 리소스 운영 경험",
@@ -56,7 +56,7 @@ const ozRewrite: ProjectData = {
                     ],
                 },
                 {
-                    title: "미디어 · 카메라 · 이동",
+                    title: "[미디어 · 카메라 · 이동]",
                     items: [
                         "CRIWARE 영상 · 오디오 연출",
                         "Cinemachine 카메라 연출",
@@ -64,28 +64,33 @@ const ozRewrite: ProjectData = {
                     ],
                 },
                 {
-                    title: "분석 · 최적화",
+                    title: "[분석 · 최적화]",
                     items: [
-                        { text: "Unity Profiler 기반 성능 분석", sub: ["Frame / CPU / GPU / GC 분석"] },
-                        { text: "Memory Profiler 기반 메모리 분석", sub: ["Snapshot 및 참조 추적"] },
-                        { text: "Xcode Instruments 기반 iOS 메모리 분석", sub: ["메모리 이슈 및 크래시 추적"] },
+                        {text: "Unity Profiler 기반 성능 분석", sub: ["Frame / CPU / GPU / GC 분석"]},
+                        {text: "Memory Profiler 기반 메모리 분석", sub: ["Snapshot 및 참조 추적"]},
+                        {text: "Xcode Instruments 기반 iOS 메모리 분석", sub: ["메모리 이슈 및 크래시 추적"]},
                     ],
                 },
                 {
-                    title: "협업 · 파이프라인",
+                    title: "[협업 · 파이프라인]",
                     items: [
-                        "Jenkins 기반 Dev / QA 빌드 자동화",
+                        "Jenkins 기반 Dev 및 QA 빌드",
+                        "iFix 핫픽스: 영향 범위 최소 수정 → DLL(어셈블리) 빌드 → Dev 검증 후 배포 프로세스 전달",
                         "Jira · Confluence · Slack 협업 환경",
                         "Rider 개발 환경",
                     ],
                 },
                 {
-                    title: "대표 적용 사례",
+                    title: "[대표 적용 사례]",
                     items: [
-                        `Addressables 메모리 해제 구조 설계 → <a href="#summon-overview">6. 소환 시스템 & 연출 최적화</a>`,
-                        `점진 로딩 UI 구조 설계 → <a href="#core-ui-cases">1. 메일 시스템</a>`,
-                        `패턴 기반 미니게임 구조화 → <a href="#event-minigame-overview">2. 이벤트용 미니게임 시스템</a>`,
-                        `Editor Tool 제작 → <a href="#stage-overview">4. 스테이지 시스템 & 개발 툴</a>`,
+                        `Addressables 기반 리소스 로드 · 캐시 · 해제 구조 설계 → <a href="#summon-overview">6. 소환 시스템 & 연출 최적화</a>`,
+                        `Addressables + ResourceManager 기반 맵 로드/해제 및 메모리 관리 개선 → <a href="#stage-overview">4. 스테이지 시스템 & 개발 툴</a>`,
+                        `LoopScrollRect 기반 대량 데이터 UI + 점진 로딩 구조 설계 → <a href="#core-ui-cases">1. 메일 시스템</a>`,
+                        `Factory · Strategy · State 패턴 기반 미니게임 구조 설계 → <a href="#event-minigame-overview">2. 이벤트용 미니게임 시스템</a>`,
+                        `Timeline + Spine Custom Track 기반 연출 시스템 구축 → <a href="#summon-overview">6. 소환 시스템 & 연출 최적화</a>`,
+                        `Unity Editor Tool 제작으로 제작 효율 개선 → <a href="#stage-overview">4. 스테이지 시스템 & 개발 툴</a>`,
+                        `CRIWARE 영상 로드/해제 최적화 및 연출 흐름 설계 
+        → <a href="#summon-overview">6. 소환 시스템 & 연출 최적화</a>`,
                     ],
                 },
             ],
@@ -737,7 +742,7 @@ const ozRewrite: ProjectData = {
             id: "work-summary",
             title: "7. 작업 환경 및 기술 별 작업 내용 요약",
             bullets: [
-                "개발/협업: Unity(UGUI), Rider, Jira/Confluence/Slack, Jenkins, AssetPipeline/AssetBundle 운용",
+                "개발/협업: Unity(UGUI), Rider, Jira/Confluence/Slack, Jenkins(핫픽스 DLL 빌드·검증 파이프라인), AssetPipeline/AssetBundle 운용(콘텐츠 단위 번들 분리·Common 공용화)",
                 "설계: 라이브 서비스 핵심 UI 전반 설계·구현, 의존성 조율, 확장 가능한 구조로 리팩토링",
                 "비동기/연출: UniTask 흐름 제어, DOTween UI 애니메이션, Timeline 기반 연출 구조/커스텀 확장, CRIWARE 로드/해제 최적화",
                 "리소스/최적화: Addressables 로드·캐시·해제 전략, Profiler/Xcode Instruments/Memory Profiler로 분석",
