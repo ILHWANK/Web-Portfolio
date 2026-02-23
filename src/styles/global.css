@@ -606,3 +606,9 @@ a {
     margin-bottom: 6px;
     color: var(--fg);
 }
+
+.fc__impact {
+    margin-top: 6px;
+    opacity: .85;
+    font-size: .95rem;
+}

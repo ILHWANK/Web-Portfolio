@@ -14,6 +14,7 @@ const notionLabel = card?.notionLabel ?? "상세 정보(Notion)";
         <div>
             <h3 class="fc__title">{card.title}</h3>
             <p class="fc__summary">{card.summary}</p>
+            {card.impact ? <p class="fc__impact">{card.impact}</p> : null}
         </div>
     </header>
 

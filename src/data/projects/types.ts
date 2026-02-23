@@ -12,6 +12,7 @@ export type CardLink = {
 export type FeatureCard = {
     title: string;
     summary: string;
+    impact?: string;
     media?: MediaItem[];
     points?: string[];
     notionHref?: string;
