@@ -13,6 +13,35 @@ const headline =
     "실제 플레이 흐름을 기준으로, Unity 기반 UI·연출·비동기 로딩·최적화 사례를 영상 중심으로 정리했습니다.";
 const subline =
     "Addressables, MessageSystem, CSV 기반 설계 등 상세 구현 의도는 Notion에 별도로 정리되어 있습니다.";
+
+const codeStructure = [
+    {
+        title: "1) 페이지 라우팅 (src/pages)",
+        description:
+            "index/about/projects 경로가 Astro 파일 기반으로 매핑되며, 프로젝트 상세는 slug 단위 페이지로 구성되어 있습니다.",
+    },
+    {
+        title: "2) 공통 레이아웃/컴포넌트 (src/layouts, src/components)",
+        description:
+            "BaseLayout에서 전체 틀을 잡고 Header/Footer/Section/Card 같은 재사용 컴포넌트로 화면을 조립합니다.",
+    },
+    {
+        title: "3) 데이터 분리 (src/data/projects)",
+        description:
+            "프로젝트 메타데이터와 콘텐츠를 코드와 분리해 관리하여, 신규 프로젝트 추가 시 데이터 파일만 확장하면 됩니다.",
+    },
+    {
+        title: "4) 정적 에셋 (public/media)",
+        description:
+            "이미지·영상 리소스를 public/media 아래에 두고, 페이지에서는 경로 참조만 하여 빠르게 렌더링합니다.",
+    },
+    {
+        title: "5) 전역 스타일 (src/styles/global.css)",
+        description:
+            "컬러 토큰/타이포/카드/그리드 규칙을 한 곳에서 정의해 전체 페이지의 톤과 간격을 일관성 있게 유지합니다.",
+    },
+];
+
 ---
 
 <BaseLayout title="포트폴리오">
@@ -44,6 +73,24 @@ const subline =
                         </a>
                 ))}
             </div>
+
+            <div class="spacer"></div>
+
+            <section class="structure" aria-labelledby="code-structure-title">
+                <h2 id="code-structure-title" class="h2">코드 구성 요약</h2>
+                <p class="muted structure__intro">
+                    이 포트폴리오는 아래 구조를 기준으로 유지보수와 확장을 쉽게 하도록 설계되어 있습니다.
+                </p>
+
+                <ul class="structure__list">
+                    {codeStructure.map((item) => (
+                            <li class="structure__item">
+                                <h3 class="h3 structure__title">{item.title}</h3>
+                                <p class="muted">{item.description}</p>
+                            </li>
+                    ))}
+                </ul>
+            </section>
         </section>
     </main>
 

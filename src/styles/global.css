@@ -576,3 +576,33 @@ a {
     }
 }
 
+.structure {
+    margin-top: 26px;
+    padding: 20px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--card);
+}
+
+.structure__intro {
+    margin-bottom: 12px;
+}
+
+.structure__list {
+    list-style: none;
+    display: grid;
+    gap: 10px;
+    padding: 0;
+}
+
+.structure__item {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 12px;
+    background: rgba(255,255,255,0.02);
+}
+
+.structure__title {
+    margin-bottom: 6px;
+    color: var(--fg);
+}
