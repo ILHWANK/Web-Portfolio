@@ -6,9 +6,11 @@ const VID = `${ROOT}/video`;
 
 const lwc: ProjectData = {
     slug: "lwc",
-    title: "편지와 마녀의 아이 (개인 프로젝트)",
+    title: "편지와 마녀의 아이" +
+        "(개인 프로젝트)",
     notionLabel: "상세 코드(Notion)",
-    tagline: "플레이 흐름 기반 스토리 시스템 설계(데이터·이벤트)",
+    tagline: "플레이 흐름 기반 스토리 시스템 설계" +
+        "(데이터·이벤트)",
     thumb: {
         src: `${IMG}/lwc.png`,
         alt: "편지와 마녀의 아이 썸네일",
