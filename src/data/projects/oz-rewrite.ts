@@ -6,8 +6,8 @@ const VID = `${ROOT}/video`;
 
 const ozRewrite: ProjectData = {
     slug: "oz-rewrite",
-    title: "OZ:Rewrite <br/>(실무 프로젝트)",
-    tagline: "핵심 UI 설계·운영 및 라이브 서비스 지원<br/>(연출·최적화)",
+    title: "OZ:Rewrite <br>(실무 프로젝트)",
+    tagline: "핵심 UI 설계·운영 및 라이브 서비스 지원<br>(연출·최적화)",
     thumb: {
         src: `${IMG}/ozrewrite.jpg`,
         alt: "OZ:Rewrite 썸네일",
@@ -90,8 +90,7 @@ const ozRewrite: ProjectData = {
                         `Factory · Strategy · State 패턴 기반 미니게임 구조 설계 → <a href="#event-minigame-overview">2. 이벤트용 미니게임 시스템</a>`,
                         `Timeline + Spine Custom Track 기반 연출 시스템 구축 → <a href="#summon-overview">6. 소환 시스템 & 연출 최적화</a>`,
                         `Unity Editor Tool 제작으로 제작 효율 개선 → <a href="#stage-overview">4. 스테이지 시스템 & 개발 툴</a>`,
-                        `CRIWARE 영상 로드/해제 최적화 및 연출 흐름 설계 
-        → <a href="#summon-overview">6. 소환 시스템 & 연출 최적화</a>`,
+                        `CRIWARE 영상 로드/해제 최적화 및 연출 흐름 설계 → <a href="#summon-overview">6. 소환 시스템 & 연출 최적화</a>`,
                     ],
                 },
             ],
