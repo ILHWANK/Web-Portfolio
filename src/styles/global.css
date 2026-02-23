@@ -606,3 +606,8 @@ a {
     margin-bottom: 6px;
     color: var(--fg);
 }
+
+.card__title,
+.card__tagline {
+    white-space: pre-line;
+}
