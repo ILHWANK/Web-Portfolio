@@ -7,7 +7,7 @@ const VID = `${ROOT}/video`;
 const ozRewrite: ProjectData = {
     slug: "oz-rewrite",
     title: "OZ:Rewrite (실무 프로젝트)",
-    tagline: "핵심 UI 설계·운영 및 라이브 서비스 지원 (연출·최적화)",
+    tagline: "UI 설계·콘텐츠 개발·구조 개선을 중심으로 한 Unity 클라이언트 개발 경험",
     thumb: {
         src: `${IMG}/ozrewrite.jpg`,
         alt: "OZ:Rewrite 썸네일",
@@ -16,8 +16,17 @@ const ozRewrite: ProjectData = {
     description:
         "상점·친구·메일·미션·인벤토리 등 핵심 UI 콘텐츠와 이벤트 미니게임/왕국/스테이지/영웅 정보/소환" +
         "외 시스템을 설계·구현하고, 운영 이슈를 구조적으로 개선했습니다.",
-    tags: ["Unity", "UGUI", "Addressables", "TextMeshPro", "UniTask", "Timeline", "Spine"],
-
+    tags: [
+        "Unity",
+        "UGUI",
+        "Addressables",
+        "UniTask",
+        "Timeline",
+        "Spine",
+        "UI Architecture",
+        "Tool Development",
+        "Optimization"
+    ],
     sections: [
         // -----------------------------
         // 담당 영역 / 기여 요약 (상단)
@@ -133,6 +142,7 @@ const ozRewrite: ProjectData = {
                 {
                     title: "Shop",
                     summary: "공통 Slot + UIStyle로 다양한 재화/구매 분기 UI를 통합",
+                    impact: "재화 추가와 구매 방식 변경에도 공통 구조를 유지해 수정 범위를 최소화하고, 유사 콘텐츠로 빠르게 재사용 가능하도록 개선",
                     media: [
                         {type: "image", src: `${IMG}/shop_main1.jpg`, alt: "상점 메인"},
                         {type: "image", src: `${IMG}/shop_payment2.jpg`, alt: "상점 다수 구매"},
@@ -152,6 +162,7 @@ const ozRewrite: ProjectData = {
                 {
                     title: "Mail",
                     summary: "대량 메일에서도 서버 부하를 줄이는 점진 로딩 구조",
+                    impact: "점진 로딩 구조를 적용해 대량 메일 환경에서도 서버 부하를 완화하고 안정적인 스크롤 경험을 유지",
                     media: [
                         {type: "image", src: `${IMG}/mail_main.jpg`, alt: "메일 리스트"},
                         {type: "image", src: `${IMG}/mail_main2.jpg`, alt: "스크롤 후 추가 로딩"},
@@ -169,6 +180,7 @@ const ozRewrite: ProjectData = {
                 {
                     title: "Friend",
                     summary: "확장(지원 영웅) 대비 진입 구조 + 테스트 효율 개선",
+                    impact: "향후 기능 확장을 고려한 구조를 선구축해 추가 개발과 테스트 작업을 안정적으로 진행 가능하도록 개선",
                     media: [
                         {type: "image", src: `${IMG}/friend_main.jpg`, alt: "친구 메인"},
                         {type: "image", src: `${IMG}/friend_info.jpg`, alt: "Info Popup"},
@@ -384,6 +396,7 @@ const ozRewrite: ProjectData = {
                 {
                     title: "왕국 선물",
                     summary: "상호작용 방식 개선 + 연출 타이밍/등장 NPC 확장",
+                    impact: "기존 구조 제약을 해소해 연출과 기능 확장이 가능한 기반을 마련하고 이후 콘텐츠 개발에 활용 가능하도록 개선",
                     media: [{
                         type: "video",
                         src: `${VID}/kingdom_present.mp4`,
@@ -543,6 +556,7 @@ const ozRewrite: ProjectData = {
                 {
                     title: "로드/메모리 관리 개선",
                     summary: "이전 맵 해제 + 페이드 연출로 체감 지연을 자연스럽게 처리",
+                    impact: "맵 이동 시 불필요 리소스를 즉시 해제하도록 개선해 메모리 사용량 증가 문제와 이동 시 불안정성을 해소",
                     points: [
                         "스테이지 이동 시 로드만 하고 해제하지 않아 메모리 이슈 발생",
                         "ResourceManager로 이전 맵 리소스를 즉시 해제하도록 수정",
@@ -678,6 +692,7 @@ const ozRewrite: ProjectData = {
                 {
                     title: "소환 UI",
                     summary: "영상+배너+다수 캐릭터 구조로 전환(메모리 최적화 포함)",
+                    impact: "연출 단계별 리소스 로드·해제 구조를 정리해 메모리 증가 문제를 안정적으로 제어할 수 있도록 개선",
                     media: [
                         {type: "image", src: `${IMG}/summon_main.jpg`, alt: "소환 메인"},
                         {type: "gif", src: `${IMG}/summon_banner.gif`, alt: "배너 전환"},
