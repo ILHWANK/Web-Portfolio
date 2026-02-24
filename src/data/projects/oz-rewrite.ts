@@ -12,20 +12,18 @@ const ozRewrite: ProjectData = {
         src: `${IMG}/ozrewrite.jpg`,
         alt: "OZ:Rewrite 썸네일",
     },
-    headline: "라이브 서비스 지원 및 UI·연출·최적화 사례를 미디어 중심으로 정리",
+    headline: "Unity 기반 게임 시스템 설계와 구조 개선 사례를 미디어 중심으로 정리",
     description:
-        "상점·친구·메일·미션·인벤토리 등 핵심 UI 콘텐츠와 이벤트 미니게임/왕국/스테이지/영웅 정보/소환" +
-        "외 시스템을 설계·구현하고, 운영 이슈를 구조적으로 개선했습니다.",
+        "상점·친구·메일·미션·인벤토리 등 핵심 콘텐츠 시스템을 설계·구현하고, 기획 변경과 구조 개편 과정에서 재사용 가능한 구조로 개선했습니다. Addressables 기반 리소스 관리와 성능 개선 작업도 함께 진행했습니다.",
     tags: [
         "Unity",
-        "UGUI",
-        "Addressables",
-        "UniTask",
-        "Timeline",
-        "Spine",
+        "C#",
+        "System Design",
         "UI Architecture",
+        "Addressables",
+        "Async Programming",
         "Tool Development",
-        "Optimization"
+        "Optimization",
     ],
     sections: [
         // -----------------------------
