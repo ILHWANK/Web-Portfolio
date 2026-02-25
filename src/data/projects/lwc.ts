@@ -40,6 +40,7 @@ const lwc: ProjectData = {
             lead: "개인 프로젝트로서 ‘구조 유지’와 ‘확장 가능성’을 플레이 흐름 안에서 검증하고 있습니다.",
             bullets: [
                 "최종 개선일: 2026.01.27",
+                "Notion: https://www.notion.so/Project-LWC-2026-02-18-2ce7c7e6db098009a8b4c7b579e4f103?source=copy_link",
                 "GitHub: https://github.com/ILHWANK/Project-LWC.git",
                 "스토리 중심 2D 싱글 플레이 게임(PC) / Unity 2023.2.20",
                 "플레이 흐름(Title→로딩→허브→상호작용→맵 전환→날짜/루틴→갱신)을 기준으로 시스템을 연결",
