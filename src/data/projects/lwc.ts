@@ -115,16 +115,15 @@ const lwc: ProjectData = {
                         {type: "image", src: `${IMG}/title_to_load_1.gif`, alt: "전부 로드"},
                         {type: "image", src: `${IMG}/title_to_load_2.gif`, alt: "미 로드"},
                     ],
+                    links: [
+                        {label: "관련 코드(Notion)", href: "https://www.notion.so/Project-LWC-2026-02-18-2ce7c7e6db098009a8b4c7b579e4f103?source=copy_link#2d37c7e6db09807d8f9de76ae32e44a7", kind: "code"},
+                    ],
                     points: [
                         "LoadingUIController가 로딩 큐(_items) 관리: 함수 기반으로 로드 확장 가능",
                         "Label 기반 Addressables 로딩 대상 수집으로 하드코딩 제거",
                         "NewGame: 캐시 전체 해제 후 재로드 / LoadGame: 캐시 스킵 + 미로드만 로드",
                         "로드 완료 직후 FadeOut→FadeIn으로 “로딩→연출→진입”을 하나의 흐름으로 연결",
                         "관련: LoadingUIController / ResourceManager / FadeManager",
-                    ],
-                    notionHref: "#",
-                    links: [
-                        {label: "관련 코드(Notion)", href: "#", kind: "code"},
                     ],
                 },
 
@@ -144,14 +143,13 @@ const lwc: ProjectData = {
                             poster: `${IMG}/magicbookpopup.png`,
                         },
                     ],
+                    links: [{label: "관련 코드(Notion)", href: "https://www.notion.so/Project-LWC-2026-02-18-2ce7c7e6db098009a8b4c7b579e4f103?source=copy_link#2d37c7e6db098030ac56dd65e03a2b2f", kind: "code"}],
                     points: [
                         "Scene에 UI를 상주시켜두지 않고 UIManager가 생성/닫기/정리를 관리",
                         "PopupData로 ‘어느 탭으로 열지’를 외부에서 결정 → 확장 시 구조 변경 최소화",
                         "Content는 OnEnter/OnExit로 정리해 탭 전환 안정성 확보",
                         "관련: UIManager / UIMagicBookPopup / InventoryContent / CalendarContent / MenuContent",
                     ],
-                    notionHref: "#",
-                    links: [{label: "관련 코드(Notion)", href: "#", kind: "code"}],
                 },
 
                 {
@@ -164,6 +162,7 @@ const lwc: ProjectData = {
                         {type: "image", src: `${IMG}/map_move_1.gif`, alt: "맵 전환(1)"},
                         {type: "image", src: `${IMG}/map_move_2.gif`, alt: "맵 전환(2)"},
                     ],
+                    links: [{label: "관련 코드(Notion)", href: "https://www.notion.so/Project-LWC-2026-02-18-2ce7c7e6db098009a8b4c7b579e4f103?source=copy_link#2d37c7e6db0980eebceaf495ee59ed26", kind: "code"}],
                     points: [
                         "상호작용 오브젝트가 맵 시스템을 직접 제어하지 않도록 책임 분리",
                         "전환 시퀀스 순서 보장: FadeOut→Map Load→Camera Follow→FadeIn",
@@ -171,8 +170,6 @@ const lwc: ProjectData = {
                         "Spot 캐싱으로 배치 로직에 활용",
                         "관련: Door / IInteractable / MapSystem / ResourceManager / CameraManager / FadeManager",
                     ],
-                    notionHref: "#",
-                    links: [{label: "관련 코드(Notion)", href: "#", kind: "code"}],
                 },
 
                 {
@@ -189,6 +186,7 @@ const lwc: ProjectData = {
                             poster: `${IMG}/localization_story.png`,
                         },
                     ],
+                    links: [{label: "관련 코드(Notion)", href: "https://www.notion.so/Project-LWC-2026-02-18-2ce7c7e6db098009a8b4c7b579e4f103?source=copy_link#2f47c7e6db09803cbc37dc408575bd66", kind: "code"}],
                     points: [
                         "LocalizedText가 LanguageChanged/FontChanged 메시지를 구독해 즉시 갱신",
                         "FontPolicyManager가 언어별 폰트를 Addressables로 로드 후 전역 적용",
@@ -196,8 +194,6 @@ const lwc: ProjectData = {
                         "GameData에 언어 저장 → 재시작 후에도 유지",
                         "관련: LocalizationManager / LocalizedText / FontPolicyManager / DialogueManager / MessageSystem",
                     ],
-                    notionHref: "#",
-                    links: [{label: "관련 코드(Notion)", href: "#", kind: "code"}],
                 },
 
                 {
@@ -213,6 +209,7 @@ const lwc: ProjectData = {
                             poster: `${IMG}/storycut.png`,
                         },
                     ],
+                    links: [{label: "관련 코드(Notion)", href: "https://www.notion.so/Project-LWC-2026-02-18-2ce7c7e6db098009a8b4c7b579e4f103?source=copy_link#30a7c7e6db0980eab918dfd0aa402f61", kind: "code"}],
                     points: [
                         "CSV→Dictionary 캐시로 컷 데이터 O(1) 접근, 런타임 조회 비용 최소화",
                         "RequestStartStoryMessage 기반 시작 트리거로 결합도 완화",
@@ -220,8 +217,6 @@ const lwc: ProjectData = {
                         "StoryCutType 분기로 출력 전략 확장 가능(현재 WorldBubble 적용)",
                         "관련: StoryDirectorCore / StoryRunnerBehaviour / StoryPresenter / WorldBubbleView / TableManager",
                     ],
-                    notionHref: "#",
-                    links: [{label: "관련 코드(Notion)", href: "#", kind: "code"}],
                 },
             ],
         },
