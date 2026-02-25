@@ -11,6 +11,33 @@ const projects = [ozRewrite, lwc];
 const headline =
     "라이브 서비스 Unity 클라이언트 개발자 김일환입니다.";
 
+const notionPortfolio = [
+    {
+        title: "OZ:Rewrite (실무 프로젝트)",
+        link: "https://www.notion.so/OZ-Rewrite-2ff7c7e6db098058b74adc5226909065",
+        description:
+            "Unity 기반 라이브 서비스 게임 클라이언트 개발 경험을 정리한 포트폴리오입니다. 상점·미션·이벤트·왕국·소환 등 핵심 콘텐츠 시스템을 설계·구현하고 구조 개선 경험을 정리했습니다.",
+    },
+    {
+        title: "Project LWC (개인 프로젝트)",
+        link: "https://www.notion.so/Project-LWC-2026-02-18-2ce7c7e6db098009a8b4c7b579e4f103",
+        description:
+            "Unity 기반 개인 프로젝트로 UIManager·ResourceManager·LocalizationManager 등 핵심 시스템을 직접 설계했습니다. CSV 기반 데이터 구조와 스토리 흐름을 중심으로 정리했습니다.",
+    },
+    {
+        title: "자료구조 · 알고리즘 정리",
+        link: "https://www.notion.so/2cb7c7e6db0980beab0aea2b1b918728",
+        description:
+            "코딩 테스트 대비를 위해 문제 해결 과정과 핵심 아이디어를 중심으로 정리했습니다.",
+    },
+    {
+        title: "디자인 패턴 정리",
+        link: "https://www.notion.so/2cd7c7e6db0980ac9e2be7de66a09201",
+        description:
+            "게임 개발 과정에서 사용한 디자인 패턴을 Unity 구조에 맞게 적용한 기록입니다.",
+    },
+];
+
 const subline =
     "실제 프로젝트에서 구현한 UI·연출·비동기 로딩·최적화 사례를 플레이 흐름 기준 영상 중심으로 정리했습니다. Addressables, MessageSystem, CSV 기반 설계 등 상세 구현 의도는 Notion에 별도로 정리되어 있습니다.";
 
@@ -55,8 +82,49 @@ const codeStructure = [
             <p class="lead">{headline}</p>
             <p class="muted">{subline}</p>
 
+            <h2 class="h2">Web Portfolio Projects</h2>
+
+            <p class="muted">
+                영상과 이미지를 중심으로 정리한 주요 프로젝트입니다.
+            </p>
+
             <div class="spacer"></div>
-            
+
+            <section class="structure" aria-labelledby="portfolio-overview-title">
+
+                <h2 id="portfolio-overview-title" class="h2">
+                    Portfolio Overview
+                </h2>
+
+                <p class="muted structure__intro">
+                    주요 프로젝트와 학습 기록은 아래 Notion 문서에서 상세히 확인할 수 있습니다.
+                </p>
+
+                <ul class="structure__list">
+                    {notionPortfolio.map((item) => (
+                            <li class="structure__item">
+
+                                <h3 class="h3 structure__title">
+                                    <a
+                                            href={item.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                    >
+                                        {item.title}
+                                    </a>
+                                </h3>
+
+                                <p class="muted">
+                                    {item.description}
+                                </p>
+
+                            </li>
+                    ))}
+                </ul>
+
+            </section>
+
+            <div class="spacer"></div>
             <div class="cards">
                 {projects.map((p) => (
                         <a class="card" href={`${import.meta.env.BASE_URL}projects/${p.slug}/`}>
