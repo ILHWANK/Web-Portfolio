@@ -161,8 +161,8 @@ const lwc: ProjectData = {
                     impact:
                         "상호작용 오브젝트와 맵 시스템 결합을 낮추고, 전환 순서 보장으로 UX 안정성을 확보(이전 맵 해제 포함)",
                     media: [
-                        {type: "image", src: `${IMG}/map_move_1.png`, alt: "맵 전환(1)"},
-                        {type: "image", src: `${IMG}/map_move_2.png`, alt: "맵 전환(2)"},
+                        {type: "image", src: `${IMG}/map_move_1.gif`, alt: "맵 전환(1)"},
+                        {type: "image", src: `${IMG}/map_move_2.gif`, alt: "맵 전환(2)"},
                     ],
                     points: [
                         "상호작용 오브젝트가 맵 시스템을 직접 제어하지 않도록 책임 분리",
