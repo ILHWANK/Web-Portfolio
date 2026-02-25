@@ -1,4 +1,4 @@
-import type { ProjectData } from "./types";
+import type {ProjectData} from "./types";
 
 const ROOT = `${import.meta.env.BASE_URL}/media/projects/lwc`;
 const IMG = `${ROOT}/image`;
@@ -112,11 +112,8 @@ const lwc: ProjectData = {
                     impact:
                         "진입 시퀀스를 단일 파이프라인으로 정리해 기능 확장(로드 항목 추가/변경) 시 수정 범위를 줄이고, New/Load 분기에서도 일관된 로딩 경험을 유지",
                     media: [
-                        {
-                            type: "video",
-                            src: `${VID}/title_to_game.mp4`,
-                            poster: `${IMG}/title_to_game_poster.png`,
-                        },
+                        {type: "image", src: `${IMG}/title_to_load_1.gif`, alt: "전부 로드"},
+                        {type: "image", src: `${IMG}/title_to_load_2.gif`, alt: "미 로드"},
                     ],
                     points: [
                         "LoadingUIController가 로딩 큐(_items) 관리: 함수 기반으로 로드 확장 가능",
@@ -127,7 +124,7 @@ const lwc: ProjectData = {
                     ],
                     notionHref: "#",
                     links: [
-                        { label: "관련 코드(Notion)", href: "#", kind: "code" },
+                        {label: "관련 코드(Notion)", href: "#", kind: "code"},
                     ],
                 },
 
@@ -138,10 +135,13 @@ const lwc: ProjectData = {
                     impact:
                         "탭/기능이 늘어도 Popup 구조 변경을 최소화하고, UI 생명주기와 진입 컨텍스트를 안정적으로 관리",
                     media: [
+                        {type: "image", src: `${IMG}/content_inventory.png`, alt: "인벤 토리"},
+                        {type: "image", src: `${IMG}/content_calendar.png`, alt: "달력"},
+                        {type: "image", src: `${IMG}/content_option.png`, alt: "옵션"},
                         {
                             type: "video",
-                            src: `${VID}/magicbook.mp4`,
-                            poster: `${IMG}/magicbook_poster.png`,
+                            src: `${VID}/magicbookpopup.mp4`,
+                            poster: `${IMG}/magicbookpopup.png`,
                         },
                     ],
                     points: [
@@ -151,7 +151,7 @@ const lwc: ProjectData = {
                         "관련: UIManager / UIMagicBookPopup / InventoryContent / CalendarContent / MenuContent",
                     ],
                     notionHref: "#",
-                    links: [{ label: "관련 코드(Notion)", href: "#", kind: "code" }],
+                    links: [{label: "관련 코드(Notion)", href: "#", kind: "code"}],
                 },
 
                 {
@@ -161,11 +161,8 @@ const lwc: ProjectData = {
                     impact:
                         "상호작용 오브젝트와 맵 시스템 결합을 낮추고, 전환 순서 보장으로 UX 안정성을 확보(이전 맵 해제 포함)",
                     media: [
-                        {
-                            type: "video",
-                            src: `${VID}/portal_mapchange.mp4`,
-                            poster: `${IMG}/portal_mapchange_poster.png`,
-                        },
+                        {type: "image", src: `${IMG}/map_move_1.png`, alt: "맵 전환(1)"},
+                        {type: "image", src: `${IMG}/map_move_2.png`, alt: "맵 전환(2)"},
                     ],
                     points: [
                         "상호작용 오브젝트가 맵 시스템을 직접 제어하지 않도록 책임 분리",
@@ -175,7 +172,7 @@ const lwc: ProjectData = {
                         "관련: Door / IInteractable / MapSystem / ResourceManager / CameraManager / FadeManager",
                     ],
                     notionHref: "#",
-                    links: [{ label: "관련 코드(Notion)", href: "#", kind: "code" }],
+                    links: [{label: "관련 코드(Notion)", href: "#", kind: "code"}],
                 },
 
                 {
@@ -185,10 +182,11 @@ const lwc: ProjectData = {
                     impact:
                         "런타임 즉시 전환(재시작 없이) + 폰트 정책(Addressables 로드)까지 포함해 다국어 안정성을 확보",
                     media: [
+                        {type: "image", src: `${IMG}/localization.gif`, alt: "언어 변경"},
                         {
                             type: "video",
-                            src: `${VID}/localization.mp4`,
-                            poster: `${IMG}/localization_poster.png`,
+                            src: `${VID}/localization_story.mp4`,
+                            poster: `${IMG}/localization_story.png`,
                         },
                     ],
                     points: [
@@ -199,7 +197,7 @@ const lwc: ProjectData = {
                         "관련: LocalizationManager / LocalizedText / FontPolicyManager / DialogueManager / MessageSystem",
                     ],
                     notionHref: "#",
-                    links: [{ label: "관련 코드(Notion)", href: "#", kind: "code" }],
+                    links: [{label: "관련 코드(Notion)", href: "#", kind: "code"}],
                 },
 
                 {
@@ -212,7 +210,7 @@ const lwc: ProjectData = {
                         {
                             type: "video",
                             src: `${VID}/storycut.mp4`,
-                            poster: `${IMG}/storycut_poster.png`,
+                            poster: `${IMG}/storycut.png`,
                         },
                     ],
                     points: [
@@ -223,7 +221,7 @@ const lwc: ProjectData = {
                         "관련: StoryDirectorCore / StoryRunnerBehaviour / StoryPresenter / WorldBubbleView / TableManager",
                     ],
                     notionHref: "#",
-                    links: [{ label: "관련 코드(Notion)", href: "#", kind: "code" }],
+                    links: [{label: "관련 코드(Notion)", href: "#", kind: "code"}],
                 },
             ],
         },
