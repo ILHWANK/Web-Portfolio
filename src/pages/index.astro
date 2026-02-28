@@ -12,8 +12,8 @@ const headline =
     "Unity 기반 게임 코어 시스템과 클라이언트 구조를 설계하는 개발자 김일환입니다.";
 
 const subline =
-    "라이브 서비스 프로젝트와 개인 프로젝트에서 구현한 UI·리소스 관리·비동기 로딩·데이터 구조 시스템을 실제 플레이 흐름 기준으로 정리했습니다.\n" +
-    "Addressables 기반 리소스 관리, Manager 기반 Core System 구조, CSV 기반 데이터 설계 등 구현 의도와 구조 설계 내용은 Notion에서 확인할 수 있습니다.";
+    "라이브 서비스 프로젝트와 개인 프로젝트에서 구현한 UI·리소스 관리·비동기 로딩·데이터 구조 시스템을 플레이 흐름 기준으로 정리했습니다.\n" +
+    "Addressables 기반 리소스 관리와 Manager 기반 Core System·API 구조, CSV 데이터 설계 내용은 Notion에서 확인할 수 있습니다.";
 
 const notionPortfolio = [
     {
@@ -69,11 +69,10 @@ const codeStructure = [
             "컬러 토큰/타이포/카드/그리드 규칙을 한 곳에서 정의해 전체 페이지의 톤과 간격을 일관성 있게 유지합니다.",
     },
 ];
-
 ---
 
 <BaseLayout title="포트폴리오">
-    <Header />
+    <Header/>
 
     <main class="container">
         <section class="section">
@@ -87,7 +86,8 @@ const codeStructure = [
 
             <p class="muted">
                 실제 프로젝트에서 설계하고 구현한 Core System 구조와 플레이 흐름을 영상과 이미지 중심으로 정리했습니다.
-                UIManager·ResourceManager·TableManager와 같은 Manager 기반 시스템 구조와 Addressables 기반 리소스 관리, UniTask 비동기 흐름이 실제 플레이 환경에서 어떻게 동작하는지 확인할 수 있습니다.
+                UIManager·ResourceManager·TableManager와 같은 Manager 기반 시스템 구조와 Addressables 기반 리소스 관리, UniTask 비동기 흐름이 실제
+                플레이 환경에서 어떻게 동작하는지 확인할 수 있습니다.
             </p>
 
             <div class="spacer"></div>
@@ -99,7 +99,8 @@ const codeStructure = [
                 </h2>
 
                 <p class="muted structure__intro">
-                    주요 프로젝트와 학습 기록은 Notion에서 상세히 확인할 수 있습니다. OZ:Rewrite는 실무 프로젝트 특성상 소스 코드 공개가 제한되어 미디어(영상/이미지) 중심으로 정리했으며, LWC·자료구조/알고리즘·디자인 패턴 문서에는 핵심 코드와 설계 의도를 함께 포함했습니다.
+                    주요 프로젝트와 학습 기록은 Notion 문서에서 상세히 확인할 수 있습니다.
+                    OZ:Rewrite는 실무 프로젝트 특성상 영상 중심으로 정리했으며, LWC와 학습 기록 문서에는 핵심 코드와 구조 설계를 포함했습니다.
                 </p>
 
                 <ul class="structure__list">
@@ -127,23 +128,26 @@ const codeStructure = [
             </section>
 
             <div class="spacer"></div>
-            <div class="cards">
-                {projects.map((p) => (
-                        <a class="card" href={`${import.meta.env.BASE_URL}projects/${p.slug}/`}>
-                            <img
-                                    class="card__thumb"
-                                    src={p.thumb?.src}
-                                    alt={p.thumb?.alt ?? `${p.title} 썸네일`}
-                                    loading="lazy"
-                            />
-                            <div class="card__body">
-                                <h2 class="h2">{p.title}</h2>
-                                <p class="muted">{p.tagline ?? ""}</p>
-                            </div>
-                        </a>
-                ))}
-            </div>
-
+            <section aria-labelledby="project-media-title">
+                <h2 id="project-media-title" class="h2">Project Media</h2>
+                <p class="muted">Notion 문서에는 설계와 코드 중심으로 정리했으며, Web 포트폴리오는 플레이 흐름과 시스템 동작을 영상·이미지 중심으로 구성했습니다. 카드에서 핵심 결과를 빠르게 확인할 수 있습니다.</p>
+                <div class="cards">
+                    {projects.map((p) => (
+                            <a class="card" href={`${import.meta.env.BASE_URL}projects/${p.slug}/`}>
+                                <img
+                                        class="card__thumb"
+                                        src={p.thumb?.src}
+                                        alt={p.thumb?.alt ?? `${p.title} 썸네일`}
+                                        loading="lazy"
+                                />
+                                <div class="card__body">
+                                    <h2 class="h2">{p.title}</h2>
+                                    <p class="muted">{p.tagline ?? ""}</p>
+                                </div>
+                            </a>
+                    ))}
+                </div>
+            </section>
             <div class="spacer"></div>
 
             <section class="structure" aria-labelledby="code-structure-title">
@@ -164,5 +168,5 @@ const codeStructure = [
         </section>
     </main>
 
-    <Footer />
+    <Footer/>
 </BaseLayout>
