@@ -337,7 +337,7 @@ const ozRewrite: ProjectData = {
                         {
                             type: "video",
                             src: `${VID}/vote.mp4`,
-                            poster: `${IMG}/vote.png`,
+                            poster: `${IMG}/vote_main.jpg`,
                         },
                     ],
                     points: [
