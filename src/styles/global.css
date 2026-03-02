@@ -585,6 +585,13 @@ a {
     background: var(--card);
 }
 
+    /* structure 안에서 긴 영문/URL/연속 토큰이 박스 밖으로 나가지 않게 */
+    .structure,
+    .structure * {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
 .structure__intro {
     margin-bottom: 12px;
 }
@@ -607,6 +614,11 @@ a {
     margin-bottom: 6px;
     color: var(--fg);
 }
+
+    .structure__title a {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
 
 .fc__impact {
     margin-top: 6px;
