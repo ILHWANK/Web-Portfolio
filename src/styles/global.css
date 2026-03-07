@@ -166,19 +166,15 @@ a {
     gap: 6px;
 }
 
-.cards--vertical {
-    grid-template-columns: 1fr;
-}
-
-.card--vertical {
-    grid-template-columns: 1fr;
-}
-
-    .card--vertical .card__thumb {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 16 / 9;
+    .card--vertical,
+    .card--vertical .card__body {
+        min-width: 0;
     }
+
+        .card--vertical .card__body > p,
+        .card--vertical .card__body > h2 {
+            overflow-wrap: anywhere;
+        }
 
 .tags {
     display: flex;
