@@ -160,6 +160,20 @@ a {
     border: 1px solid var(--line);
 }
 
+.cards--vertical {
+    grid-template-columns: 1fr;
+}
+
+.card--vertical {
+    grid-template-columns: 1fr;
+}
+
+    .card--vertical .card__thumb {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
 .card__body {
     display: flex;
     flex-direction: column;
