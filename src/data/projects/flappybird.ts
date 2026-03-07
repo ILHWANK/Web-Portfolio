@@ -116,9 +116,6 @@ const flappybird: ProjectData = {
                         "Player Settings에 Application Identifier, Version Code, Custom Keystore, Alias를 반영하여 실제 배포 가능한 형태로 구성",
                     impact:
                         "Unity 프로젝트 내부 설정만이 아니라, 스토어 배포를 위한 패키지 식별과 서명 구조까지 함께 검증할 수 있었습니다.",
-                    media: [
-                        { type: "image", src: `${IMG}/player_settings.png`, alt: "Player Settings" },
-                    ],
                     points: [
                         "Application Identifier: com.Shinetoday.FlyBirdClone2D",
                         "Version Code: 3",
@@ -134,9 +131,6 @@ const flappybird: ProjectData = {
                         "게임 시작 시점에 MobileAds.Initialize를 호출하고 이후 Banner 광고 요청으로 연결되는 초기화 흐름 구성",
                     impact:
                         "광고 호출 전 SDK 초기화가 선행되도록 하여 광고 요청 타이밍과 게임 진입 흐름이 충돌하지 않도록 정리했습니다.",
-                    media: [
-                        { type: "image", src: `${IMG}/banner_init.png`, alt: "광고 SDK 초기화" },
-                    ],
                     points: [
                         "게임 시작 시 SDK 초기화 수행",
                         "초기화 이후 RequestBanner 호출",
@@ -170,7 +164,13 @@ const flappybird: ProjectData = {
                     impact:
                         "광고 표시와 게임 재시작을 분리해 광고 종료 이후 플레이 흐름이 자연스럽게 이어지도록 처리했습니다.",
                     media: [
-                        { type: "image", src: `${IMG}/interstitial_restart.png`, alt: "전면 광고 재시작 흐름" },
+                        { type: "image", src: `${IMG}/interstitial_restart_1.png`, alt: "전면 광고 재시작 흐름(1)" },
+                        { type: "image", src: `${IMG}/interstitial_restart_2.png`, alt: "전면 광고 재시작 흐름(2)" },
+                        {
+                            type: "video",
+                            src: `${VID}/interstitial_restart.mp4`,
+                            poster: `${IMG}/interstitial_restart_1.png`,
+                        },
                     ],
                     points: [
                         "restart() → RequestInterstitial() → showInterstitial() 흐름 구성",
@@ -186,9 +186,6 @@ const flappybird: ProjectData = {
                         "External Dependency Manager를 활용해 Android / iOS 광고 SDK 의존성을 관리하고, Manifest에 APPLICATION_ID 메타데이터를 구성",
                     impact:
                         "Unity C# 코드뿐 아니라 네이티브 SDK 의존성과 플랫폼 설정까지 포함해 광고 연동 구조 전체를 검증할 수 있었습니다.",
-                    media: [
-                        { type: "image", src: `${IMG}/manifest_dependency.png`, alt: "Manifest 및 의존성 설정" },
-                    ],
                     points: [
                         "Android: com.google.android.gms:play-services-ads:20.6.0",
                         "iOS: Google-Mobile-Ads-SDK ~> 9.0",
