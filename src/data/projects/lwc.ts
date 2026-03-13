@@ -78,6 +78,7 @@ const lwc: ProjectData = {
                 "플랫폼: PC 및 모바일",
                 "엔진: Unity 6000.3.10f1",
                 "사용 기술: C#, Unity UGUI, Addressables, Assembly, UniTask, Yarn Spinner, CSV, TMP",
+                "CI / Build: Jenkins Pipeline, Unity BatchMode Android Build",
                 "진행 형태: 개인 프로젝트 (기획·개발 전반 단독)",
             ],
         },
